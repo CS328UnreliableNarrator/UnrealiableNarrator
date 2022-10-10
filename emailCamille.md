@@ -13,7 +13,7 @@ Thanks!
 )*$$&^#
 
 
-//Dont include this section in the email. somehow the file got obstructed and so the player needs to identify the letter that correlates to the symbols.
+//Dont include this section in the email. somehow the file got obstructed and so the player needs to identify the letter that correlates to the symbols. I'm thinking these correlate to the password to get into the boss' computer
 
 ')'=B
 '&'=M
