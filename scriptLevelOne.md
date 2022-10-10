@@ -11,7 +11,7 @@ Camille: *imitates the boss "Look at me I'm so smart and know everything! Everyo
 
 James: *laughs "You're so cute when you're angry."
 
-Camille: "Nooo stop you're gonna make blush."
+Camille: *giggles "stop you're gonna make blush."
 
 James: "And? I love making you blush. It's my favorite pass time."
 
