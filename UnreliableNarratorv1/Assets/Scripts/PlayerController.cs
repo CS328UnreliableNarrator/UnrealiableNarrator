@@ -14,6 +14,9 @@ public class PlayerController : MonoBehaviour
     public float movementSmoothingSpeed = 1f;
     private Vector3 rawInputMovement;
     private Vector3 smoothInputMovement;
+
+    [SerializeField] private Camera cam3D;
+    [SerializeField] private Camera cam2D;
     
     //Input Action Maps
     private string actionMapPlayerControls = "Player Controls";
@@ -25,7 +28,8 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        cam3D.enabled = true;
+        cam2D.enabled = false;
     }
 
     // Update is called once per frame
@@ -40,6 +44,12 @@ public class PlayerController : MonoBehaviour
         Vector2 inputMovement = value.ReadValue<Vector2>();
         rawInputMovement = new Vector3(inputMovement.x, 0, inputMovement.y);
         Debug.Log(string.Format("{0}", rawInputMovement));
+    }
+
+    public void changeCamera(InputAction.CallbackContext value)
+    {
+        cam3D.enabled = !cam3D.enabled;
+        cam2D.enabled = !cam2D.enabled;
     }
 
     void CalculateMovementInputSmoothing()
