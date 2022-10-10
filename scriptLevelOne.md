@@ -51,7 +51,7 @@ Cut scene
  
  **Fuck! I need to do something
  
- *James rushes to the door. he presses the keypad but it doens't work, the door won't open
+ *James rushes to the door. he presses the keypad but it doesn't work, the door won't open
  
  **What the hell?
  
