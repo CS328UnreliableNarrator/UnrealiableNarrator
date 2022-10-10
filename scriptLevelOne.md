@@ -11,7 +11,7 @@ Camille: *imitates the boss "Look at me I'm so smart and know everything! Everyo
 
 James: *laughs "You're so cute when you're angry."
 
-Camille: *giggles "stop you're gonna make blush."
+Camille: *giggles "Stop you're gonna make blush."
 
 James: "And? I love making you blush. It's my favorite pass time."
 
@@ -35,7 +35,7 @@ Cut scene
 
 *James stands at the giant office windows watching the bustle of the streets. He checks his phone and looks back at Camille's desk. No sign of her
 
-*Turns back to window. Notices her standing near a black car. 
+*Turns back to window. Notices her standing near a black car. She's looking around a lot
 
 **Huh? I wonder if she's okay...I should go check on her.
 
@@ -66,7 +66,7 @@ Cut scene
  
  //Below are James' thoughts when the player interacts with certain parts of the puzzles
  
- Phrases he can utter throughout. These don't necessarily have to happen at specific moments
+Phrases he can utter throughout. These don't necessarily have to happen at specific moments
  
  	**I hope she's okay
  	**I really need out of here
@@ -80,11 +80,11 @@ Cut scene
  	**I wonder what this is 
  	
  	Reads the email
- 	**Hmm no name...Funny I thought I saw these colors somewhere
+ 	**Hmm no name...Funny I thought I saw these symbols somewhere
  	
  Cubicle with colors:
  
- 	**Got it! I have the password for the boss' computer
+ 	**Got it! I have to go to the boss' computer
  	
  Boss computer:
  
