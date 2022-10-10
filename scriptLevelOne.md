@@ -84,7 +84,7 @@ Cut scene
  	
  Cubicle with colors:
  
- 	**Got it!
+ 	**Got it! I need to look at the Boss' computer
  	
  Boss computer:
  
