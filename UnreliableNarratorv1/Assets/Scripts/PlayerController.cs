@@ -72,6 +72,7 @@ public class PlayerController : MonoBehaviour
         if (cam3D.enabled)
         {
             playerMovementBehavior.UpdateMovementData(smoothInputMovement);
+            //rawInputMovement = new Vector3(0.0f, 0.0f, 0.0f);
         }
     }
 
