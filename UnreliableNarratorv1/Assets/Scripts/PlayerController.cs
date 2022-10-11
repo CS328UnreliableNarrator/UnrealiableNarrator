@@ -17,7 +17,10 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] private Camera cam3D;
     [SerializeField] private Camera cam2D;
-    
+
+    [SerializeField] private bool cam3DInitialized;
+    [SerializeField] private bool cam2DInitialized;
+
     //Input Action Maps
     private string actionMapPlayerControls = "Player Controls";
     private string actionMapMenuControls = "Menu Controls";
@@ -28,11 +31,11 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        cam3D.enabled = true;
-        cam2D.enabled = false;
+        cam3D.enabled = cam3DInitialized;
+        cam2D.enabled = cam2DInitialized;
         
-        cam3D.GetComponent<AudioListener>().enabled = true;
-        cam2D.GetComponent<AudioListener>().enabled = false;
+        cam3D.GetComponent<AudioListener>().enabled = cam3DInitialized;
+        cam2D.GetComponent<AudioListener>().enabled = cam2DInitialized;
     }
 
     // Update is called once per frame
@@ -65,7 +68,10 @@ public class PlayerController : MonoBehaviour
 
     void UpdatePlayerMovement()
     {
-        playerMovementBehavior.UpdateMovementData(smoothInputMovement);
+        if (cam3D.enabled)
+        {
+            playerMovementBehavior.UpdateMovementData(smoothInputMovement);
+        }
     }
 
     public void EnableGameplayControls()
