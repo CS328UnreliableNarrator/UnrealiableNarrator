@@ -30,6 +30,9 @@ public class PlayerController : MonoBehaviour
     {
         cam3D.enabled = true;
         cam2D.enabled = false;
+
+        cam3D.GetComponent<AudioListener>().enabled = true;
+        cam2D.GetComponent<AudioListener>().enabled = false;
     }
 
     // Update is called once per frame
@@ -50,6 +53,9 @@ public class PlayerController : MonoBehaviour
     {
         cam3D.enabled = !cam3D.enabled;
         cam2D.enabled = !cam2D.enabled;
+
+        cam3D.GetComponent<AudioListener>().enabled = !cam3D.GetComponent<AudioListener>().enabled;
+        cam2D.GetComponent<AudioListener>().enabled = !cam2D.GetComponent<AudioListener>().enabled; 
     }
 
     void CalculateMovementInputSmoothing()
