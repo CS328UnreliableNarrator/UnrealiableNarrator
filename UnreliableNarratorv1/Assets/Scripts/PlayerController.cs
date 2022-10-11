@@ -43,9 +43,7 @@ public class PlayerController : MonoBehaviour
     {
         CalculateMovementInputSmoothing();
         UpdatePlayerMovement();
-        
-        cam3D.GetComponent<AudioListener>().enabled = !cam3D.GetComponent<AudioListener>().enabled;
-        cam2D.GetComponent<AudioListener>().enabled = !cam2D.GetComponent<AudioListener>().enabled; 
+
     }
 
     public void OnMovement(InputAction.CallbackContext value)
@@ -59,6 +57,9 @@ public class PlayerController : MonoBehaviour
     {
         cam3D.enabled = !cam3D.enabled;
         cam2D.enabled = !cam2D.enabled;
+                
+        cam3D.GetComponent<AudioListener>().enabled = !cam3D.GetComponent<AudioListener>().enabled;
+        cam2D.GetComponent<AudioListener>().enabled = !cam2D.GetComponent<AudioListener>().enabled; 
     }
 
     void CalculateMovementInputSmoothing()
