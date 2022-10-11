@@ -30,6 +30,9 @@ public class PlayerController : MonoBehaviour
     {
         cam3D.enabled = true;
         cam2D.enabled = false;
+        
+        cam3D.GetComponent<AudioListener>().enabled = true;
+        cam2D.GetComponent<AudioListener>().enabled = false;
     }
 
     // Update is called once per frame
@@ -37,6 +40,9 @@ public class PlayerController : MonoBehaviour
     {
         CalculateMovementInputSmoothing();
         UpdatePlayerMovement();
+        
+        cam3D.GetComponent<AudioListener>().enabled = !cam3D.GetComponent<AudioListener>().enabled;
+        cam2D.GetComponent<AudioListener>().enabled = !cam2D.GetComponent<AudioListener>().enabled; 
     }
 
     public void OnMovement(InputAction.CallbackContext value)
