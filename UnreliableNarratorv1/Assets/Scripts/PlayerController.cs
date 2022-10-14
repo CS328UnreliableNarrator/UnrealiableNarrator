@@ -22,7 +22,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Camera cam2D;
 
     [SerializeField] private bool cam3DInitialized;
-    [SerializeField] private bool cam2DInitialized;
 
     //Input Action Maps
     private string actionMapPlayerControls = "Player Controls";
@@ -35,10 +34,10 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         cam3D.enabled = cam3DInitialized;
-        cam2D.enabled = cam2DInitialized;
+        cam2D.enabled = !cam3DInitialized;
         
         cam3D.GetComponent<AudioListener>().enabled = cam3DInitialized;
-        cam2D.GetComponent<AudioListener>().enabled = cam2DInitialized;
+        cam2D.GetComponent<AudioListener>().enabled = !cam3DInitialized;
     }
 
     // Update is called once per frame
@@ -56,7 +55,7 @@ public class PlayerController : MonoBehaviour
         Debug.Log(string.Format("{0}", rawInputMovement));
     }
 
-    public void changeCamera(InputAction.CallbackContext value)
+    public void ToggleCamera(InputAction.CallbackContext value)
     {
         cam3D.enabled = !cam3D.enabled;
         cam2D.enabled = !cam2D.enabled;
