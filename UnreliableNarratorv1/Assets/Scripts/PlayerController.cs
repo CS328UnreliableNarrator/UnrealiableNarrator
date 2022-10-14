@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,6 +15,8 @@ public class PlayerController : MonoBehaviour
     public float movementSmoothingSpeed = 1f;
     private Vector3 rawInputMovement;
     private Vector3 smoothInputMovement;
+
+    public InteractionPanel interactionPanel;
 
     [SerializeField] private Camera cam3D;
     [SerializeField] private Camera cam2D;
@@ -85,6 +88,32 @@ public class PlayerController : MonoBehaviour
     {
         playerInput.SwitchCurrentActionMap(actionMapMenuControls);
     }
+
+    public void OnTriggerEnter(Collider collider)
+    {
+        if (collider.gameObject.tag == "InteractionTrigger")
+        {
+            Debug.Log("Interaction trigger entered!");
+            List<InteractionData> actions = collider.GetComponent<InteractionTrigger>().Actions;
+            for (int i = 0; i < actions.Count; i++)
+            {
+                this.interactionPanel.AddButton(actions[i]);
+            }
+        }
+    }
     
-    
+    public void OnTriggerExit(Collider collider)
+    {
+        if (collider.gameObject.tag == "InteractionTrigger")
+        {
+            Debug.Log("Interaction trigger exited!");
+            List<InteractionData> actions = collider.GetComponent<InteractionTrigger>().Actions;
+            for (int i = 0; i < actions.Count; i++)
+            {
+                // this.interactionPanel.(actions[i]);
+                // TO DO
+                this.interactionPanel.DeleteButton(actions[i]);
+            }
+        }
+    }  
 }

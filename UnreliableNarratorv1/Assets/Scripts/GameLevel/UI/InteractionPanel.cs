@@ -7,26 +7,54 @@ public class InteractionPanel : MonoBehaviour
     public GameObject InteractionButtonPrefab;
 
     public List<GameObject> InteractionButtonsPresent = new List<GameObject>();
+
+    private int _numberOfButtonsPresent = 0;
     // Start is called before the first frame update
     void Start()
     {
-        this.AddButton();
-        this.AddButton();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (this._numberOfButtonsPresent != this.InteractionButtonsPresent.Count)
+        {
+            for (int i = 0; i < this.InteractionButtonsPresent.Count; i++)
+            {
+                this.InteractionButtonsPresent[i].GetComponent<InteractionButton>().SetPositionIndex(i, true);
+            }
+        }
+
+        this._numberOfButtonsPresent = this.InteractionButtonsPresent.Count;
     }
 
-    public void AddButton()
+    public void AddButton(InteractionData interactionData)
     {
         GameObject newButton = Instantiate(this.InteractionButtonPrefab);
         newButton.transform.SetParent(this.transform);
+        newButton.GetComponent<InteractionButton>().InteractionPanel = this;
         newButton.GetComponent<InteractionButton>().SetPositionIndex(this.InteractionButtonsPresent.Count);
-        newButton.GetComponent<InteractionButton>().SetText("Test btn");
+        newButton.GetComponent<InteractionButton>().SetText(interactionData.GetName());
+        newButton.GetComponent<InteractionButton>().SetInteractionData(interactionData);
         
         this.InteractionButtonsPresent.Add(newButton);
+    }
+
+    public void DeleteButton(InteractionData interactionData)
+    {
+        for (int i = 0; i < this.InteractionButtonsPresent.Count; i++)
+        {
+            InteractionData btnInteractionData = this.InteractionButtonsPresent[i].GetComponent<InteractionButton>().InteractionData;
+            if (btnInteractionData.Equals(interactionData))
+            {
+                this.InteractionButtonsPresent[i].GetComponent<InteractionButton>().Out();
+                this.InteractionButtonsPresent.RemoveAt(i);
+                Debug.Log("Button deleted");
+                return;
+            }
+        }
+
+        Debug.Log("Button to delete was not present!");
     }
 }
