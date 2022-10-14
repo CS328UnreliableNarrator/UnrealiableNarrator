@@ -4,13 +4,22 @@
     <list default="true" id="e691e0c5-a0cb-4546-ac20-81fab1f3f978" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UnreliableNarratorv1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnreliableNarratorv1/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Jasmines build.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Jasmines build.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameLevel/UI/Animations/InteractionButtonAnimator.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameLevel/UI/Animations/InteractionButtonAnimator.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameLevel/UI/Animations/InteractionButtonInAnimation.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameLevel/UI/Animations/InteractionButtonInAnimation.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameLevel/UI/InteractionButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameLevel/UI/InteractionButton.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameLevel/UI/InteractionButton.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameLevel/UI/InteractionButton.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameLevel/UI/InteractionData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameLevel/UI/InteractionData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameLevel/UI/InteractionPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameLevel/UI/InteractionPanel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameLevel/UI/CustomInteractions/InteractionDataTest.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameLevel/UI/CustomInteractions/InteractionDataTest.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameLevel/UI/InteractionButton.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameLevel/UI/InteractionButton.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameLevel/UI/InteractionButton.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameLevel/UI/InteractionButton.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameLevel/UI/InteractionData.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameLevel/UI/InteractionData.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameLevel/UI/InteractionPanel.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameLevel/UI/InteractionPanel.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameLevel/UI/InteractionTrigger.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameLevel/UI/InteractionTrigger.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameLevel/UI/InteractionTrigger.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameLevel/UI/InteractionTrigger.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +27,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameLevel/UI/CustomInteractions/Interaction_Computer1.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.4.1/InputSystem/Actions/InputBindingResolver.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/3c/7e7a2fcb/List`1.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -87,7 +97,7 @@
       <updated>1665387661104</updated>
       <workItem from="1665387669888" duration="3184000" />
       <workItem from="1665452352115" duration="15241000" />
-      <workItem from="1665529121896" duration="28238000" />
+      <workItem from="1665529121896" duration="33014000" />
     </task>
     <servers />
   </component>

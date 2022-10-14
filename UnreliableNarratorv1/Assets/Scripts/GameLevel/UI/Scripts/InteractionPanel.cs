@@ -9,13 +9,7 @@ public class InteractionPanel : MonoBehaviour
     public List<GameObject> InteractionButtonsPresent = new List<GameObject>();
 
     private int _numberOfButtonsPresent = 0;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
+    
     void Update()
     {
         if (this._numberOfButtonsPresent != this.InteractionButtonsPresent.Count)
@@ -37,6 +31,11 @@ public class InteractionPanel : MonoBehaviour
         newButton.GetComponent<InteractionButton>().SetPositionIndex(this.InteractionButtonsPresent.Count);
         newButton.GetComponent<InteractionButton>().SetText(interactionData.GetName());
         newButton.GetComponent<InteractionButton>().SetInteractionData(interactionData);
+        
+        newButton.GetComponent<InteractionButton>().SetColor(interactionData.buttonColor);
+        newButton.GetComponent<InteractionButton>().SetFontColor(interactionData.buttonFontColor);
+        
+        
         
         this.InteractionButtonsPresent.Add(newButton);
     }

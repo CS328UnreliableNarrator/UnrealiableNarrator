@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class InteractionButton : MonoBehaviour
 {
     public int PositionIndex = 0;
-    private Button _buttonObj;
+    private GameObject _buttonObj;
     private TextMeshProUGUI _textObj;
     public InteractionPanel InteractionPanel;
     public InteractionData InteractionData;
@@ -17,7 +17,7 @@ public class InteractionButton : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        this._buttonObj = this.GetComponentInChildren<Button>();
+        this._buttonObj = this.GetComponentInChildren<Button>().gameObject;
         this._textObj = this.GetComponentInChildren<TextMeshProUGUI>();
     }
 
@@ -62,8 +62,19 @@ public class InteractionButton : MonoBehaviour
 
     public void SetText(string text)
     {
-        this._textObj = this.GetComponentInChildren<TextMeshProUGUI>();
+        if (!this._textObj) this._textObj = this.GetComponentInChildren<TextMeshProUGUI>();
         this._textObj.SetText(text);
+    }
+    
+    public void SetColor(Color color)
+    {
+        if (!this._buttonObj) this._buttonObj = this.GetComponentInChildren<Button>().gameObject;
+        this._buttonObj.GetComponent<Image>().color = color;
+    }
+    
+    public void SetFontColor(Color color)
+    {
+        this._textObj.color = color;
     }
 
     public void OnClick()
