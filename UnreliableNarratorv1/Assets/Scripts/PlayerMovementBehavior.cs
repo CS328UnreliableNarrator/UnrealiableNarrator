@@ -6,6 +6,7 @@ public class PlayerMovementBehavior : MonoBehaviour
 {
     [Header("Component References")]
     public Rigidbody playerRigidbody;
+    public Transform cam3D;
 
     [Header("Movement Settings")]
     public float movementSpeed = 3f;
@@ -37,10 +38,10 @@ public class PlayerMovementBehavior : MonoBehaviour
 
     void MovePlayer()
     {
-        //Vector3 movement = CameraDirection(movementDirection) * movementSpeed * Time.deltaTime;
-        Vector3 movement = movementDirection * movementSpeed * Time.deltaTime;//* 5000;
-        playerRigidbody.MovePosition(transform.position + movement);
-        //playerRigidbody.AddForce(movement);
+        Vector3 movement = movementDirection * movementSpeed * Time.deltaTime;
+        Vector3 forwardRelative = cam3D.forward.normalized * movement.z;
+        Vector3 rightRelative = cam3D.right.normalized * movement.x;
+        playerRigidbody.MovePosition(transform.position + forwardRelative + rightRelative);
     }
 
     void TurnPlayer()

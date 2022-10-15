@@ -3782,6 +3782,7 @@ GameObject:
   - component: {fileID: 632177126}
   - component: {fileID: 632177125}
   - component: {fileID: 632177124}
+  - component: {fileID: 632177131}
   - component: {fileID: 632177123}
   m_Layer: 0
   m_Name: Player
@@ -3816,6 +3817,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerRigidbody: {fileID: 632177127}
+  cam3D: {fileID: 1246972243}
   movementSpeed: 3
   turnSpeed: 0.1
 --- !u!114 &632177125
@@ -3831,8 +3833,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerMovementBehavior: {fileID: 632177124}
+  playerLookBehavior: {fileID: 632177131}
   playerInput: {fileID: 632177126}
   movementSmoothingSpeed: 1
+  lookSmoothingSpeed: 15
   interactionPanel: {fileID: 754337082}
   cam3D: {fileID: 1246972245}
   cam2D: {fileID: 19375295}
@@ -3875,7 +3879,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
+        m_CallState: 1
     m_ActionId: f3d3c46d-975c-4877-ba09-d6a75ef05f4f
     m_ActionName: PlayerControls/Movement[/Keyboard/upArrow,/Keyboard/downArrow,/Keyboard/leftArrow,/Keyboard/rightArrow,/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
   - m_PersistentCalls:
@@ -3891,11 +3895,23 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
+        m_CallState: 1
     m_ActionId: a7ef32e7-8468-4f93-91c6-c29e19781de8
     m_ActionName: PlayerControls/Camera[/Keyboard/c]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 632177125}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: OnLook
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
     m_ActionId: 9503b2b3-43f0-450e-93f9-df64a95010ca
     m_ActionName: PlayerControls/Camera Look[/Mouse/delta]
   m_NeverAutoSwitchControlSchemes: 0
@@ -3985,6 +4001,28 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &632177131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 632177122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afed09d2b49f39042a84549f82dd22b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam3D: {fileID: 1246972245}
+  lookSensitivity: 10
+  lookSpeedX: 10
+  lookSpeedY: 5
+  limitLookSphereAboutX: 1
+  limitLookSphereAboutY: 0
+  minX: 0
+  maxX: 0
+  minY: -90
+  maxY: 70
 --- !u!1001 &632423426
 PrefabInstance:
   m_ObjectHideFlags: 0

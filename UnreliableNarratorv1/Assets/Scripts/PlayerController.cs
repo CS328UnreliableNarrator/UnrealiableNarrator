@@ -9,12 +9,16 @@ public class PlayerController : MonoBehaviour
 {
     [Header("Behaviors")]
     public PlayerMovementBehavior playerMovementBehavior;
+    public PlayerLookBehavior playerLookBehavior;
 
     [Header("Input Settings")]
     public PlayerInput playerInput;
     public float movementSmoothingSpeed = 1f;
     private Vector3 rawInputMovement;
     private Vector3 smoothInputMovement;
+    public float lookSmoothingSpeed = 1f;
+    private Vector3 rawInputLook;
+    private Vector3 smoothInputLook;
 
     public InteractionPanel interactionPanel;
 
@@ -43,16 +47,35 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        CalculateMovementInputSmoothing();
-        UpdatePlayerMovement();
+        UpdatePlayer();
 
+    }
+
+    void UpdatePlayer()
+    {
+        
+
+        if (cam3D.enabled)
+        {
+            CalculateMovementInputSmoothing();
+            UpdatePlayerMovement();
+            CalculateLookInputSmoothing();
+            UpdatePlayerLook();
+        }
     }
 
     public void OnMovement(InputAction.CallbackContext value)
     {
         Vector2 inputMovement = value.ReadValue<Vector2>();
         rawInputMovement = new Vector3(inputMovement.x, 0, inputMovement.y);
-        Debug.Log(string.Format("{0}", rawInputMovement));
+        Debug.Log(string.Format("Raw Movement Input: {0}", rawInputMovement));
+    }
+
+    public void OnLook(InputAction.CallbackContext value)
+    {
+        Vector2 inputLook = value.ReadValue<Vector2>();
+        rawInputLook = new Vector3(inputLook.x, inputLook.y, 0);
+        Debug.Log(string.Format("Raw Look Input: {0}", rawInputLook));
     }
 
     public void ToggleCamera(InputAction.CallbackContext value)
@@ -69,13 +92,22 @@ public class PlayerController : MonoBehaviour
         smoothInputMovement = Vector3.Lerp(smoothInputMovement, rawInputMovement, Time.deltaTime * movementSmoothingSpeed);
     }
 
+    void CalculateLookInputSmoothing()
+    {
+        smoothInputLook = Vector3.Lerp(smoothInputLook, rawInputLook, Time.deltaTime * lookSmoothingSpeed);
+        //smoothInputLook = rawInputLook;
+    }
+
     void UpdatePlayerMovement()
     {
-        if (cam3D.enabled)
-        {
-            playerMovementBehavior.UpdateMovementData(smoothInputMovement);
-            //rawInputMovement = new Vector3(0.0f, 0.0f, 0.0f);
-        }
+
+        playerMovementBehavior.UpdateMovementData(smoothInputMovement);
+        //rawInputMovement = new Vector3(0.0f, 0.0f, 0.0f);
+    }
+
+    void UpdatePlayerLook()
+    {
+        playerLookBehavior.UpdateLookData(smoothInputLook);
     }
 
     public void EnableGameplayControls()
