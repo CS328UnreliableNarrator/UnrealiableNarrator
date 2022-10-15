@@ -4,21 +4,6 @@
     <list default="true" id="e691e0c5-a0cb-4546-ac20-81fab1f3f978" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UnreliableNarratorv1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnreliableNarratorv1/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Jasmines build.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Jasmines build.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameLevel/UI/CustomInteractions/InteractionDataTest.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameLevel/UI/CustomInteractions/InteractionDataTest.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameLevel/UI/InteractionButton.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameLevel/UI/InteractionButton.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameLevel/UI/InteractionButton.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameLevel/UI/InteractionButton.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameLevel/UI/InteractionData.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameLevel/UI/InteractionData.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameLevel/UI/InteractionPanel.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameLevel/UI/InteractionPanel.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameLevel/UI/InteractionTrigger.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameLevel/UI/InteractionTrigger.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameLevel/UI/InteractionTrigger.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameLevel/UI/InteractionTrigger.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -98,6 +83,7 @@
       <workItem from="1665387669888" duration="3184000" />
       <workItem from="1665452352115" duration="15241000" />
       <workItem from="1665529121896" duration="33014000" />
+      <workItem from="1665861441125" duration="666000" />
     </task>
     <servers />
   </component>
