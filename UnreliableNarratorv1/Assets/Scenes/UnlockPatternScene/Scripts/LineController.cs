@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LineController : MonoBehaviour
 {
@@ -27,6 +28,8 @@ public class LineController : MonoBehaviour
     {
         this.isColorDefault = false;
         this.GetComponent<Animator>().SetTrigger("CorrectPattern");
+        Invoke("SwitchScene", 1);
+
     }
 
     public void PlayWrongPatternAnimation()
@@ -38,5 +41,10 @@ public class LineController : MonoBehaviour
     public void PlayExitAnimation()
     {
         this.GetComponent<Animator>().SetTrigger("Exit");
+    }
+
+    private void SwitchScene()
+    {
+        SceneManager.LoadScene(1);
     }
 }
