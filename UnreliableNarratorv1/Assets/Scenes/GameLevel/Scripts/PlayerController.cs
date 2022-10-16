@@ -13,18 +13,25 @@ public class PlayerController : MonoBehaviour
 
     [Header("Input Settings")]
     public PlayerInput playerInput;
-    public float movementSmoothingSpeed = 1f;
+    private bool movementHeld = false; //fix input movement input needs to be restarted after camera toggle
+
+    [Range(0.0f, 30.0f)] public float movementSmoothingSpeed = 15.0f;
+
     private Vector3 rawInputMovement;
+    private Vector3 consumerInputMovement;
     private Vector3 smoothInputMovement;
-    public float lookSmoothingSpeed = 1f;
+
+    [Range(0.0f, 30.0f)] public float lookSmoothingSpeed = 15.0f;
+
     private Vector3 rawInputLook;
+    private Vector3 consumerInputLook;
     private Vector3 smoothInputLook;
 
     public InteractionPanel interactionPanel;
 
+    [Header("Camera Settings")]
     [SerializeField] private Camera cam3D;
     [SerializeField] private Camera cam2D;
-
     [SerializeField] private bool cam3DInitialized;
 
     //Input Action Maps
@@ -53,29 +60,35 @@ public class PlayerController : MonoBehaviour
 
     void UpdatePlayer()
     {
-        
-
-        if (cam3D.enabled)
-        {
-            CalculateMovementInputSmoothing();
-            UpdatePlayerMovement();
-            CalculateLookInputSmoothing();
-            UpdatePlayerLook();
-        }
+        if (!cam3D.enabled) consumerInputMovement = Vector3.zero;
+        CalculateMovementInputSmoothing();
+        UpdatePlayerMovement();
+        CalculateLookInputSmoothing();
+        UpdatePlayerLook();
     }
 
     public void OnMovement(InputAction.CallbackContext value)
     {
-        Vector2 inputMovement = value.ReadValue<Vector2>();
-        rawInputMovement = new Vector3(inputMovement.x, 0, inputMovement.y);
-        //Debug.Log(string.Format("Raw Movement Input: {0}", rawInputMovement));
+        if (cam3D.enabled)
+        {
+            Vector2 inputMovement = value.ReadValue<Vector2>();
+            rawInputMovement = new Vector3(inputMovement.x, 0, inputMovement.y);
+            consumerInputMovement = rawInputMovement;
+            rawInputMovement = Vector3.zero;
+        }
+        Debug.Log(string.Format("Raw Movement Input: {0}", rawInputMovement));
     }
 
     public void OnLook(InputAction.CallbackContext value)
     {
-        Vector2 inputLook = value.ReadValue<Vector2>();
-        rawInputLook = new Vector3(inputLook.x, inputLook.y, 0);
-        //Debug.Log(string.Format("Raw Look Input: {0}", rawInputLook));
+        if (cam3D.enabled)
+        {
+            Vector2 inputLook = value.ReadValue<Vector2>();
+            rawInputLook = new Vector3(inputLook.x, inputLook.y, 0);
+            consumerInputLook = rawInputLook;
+            rawInputLook = Vector3.zero;
+        }
+        Debug.Log(string.Format("Raw Look Input: {0}", rawInputLook));
     }
 
     public void ToggleCamera(InputAction.CallbackContext value)
@@ -89,20 +102,18 @@ public class PlayerController : MonoBehaviour
 
     void CalculateMovementInputSmoothing()
     {
-        smoothInputMovement = Vector3.Lerp(smoothInputMovement, rawInputMovement, Time.deltaTime * movementSmoothingSpeed);
+        smoothInputMovement = Vector3.Lerp(smoothInputMovement, consumerInputMovement, Time.deltaTime * movementSmoothingSpeed);
     }
 
     void CalculateLookInputSmoothing()
     {
-        smoothInputLook = Vector3.Lerp(smoothInputLook, rawInputLook, Time.deltaTime * lookSmoothingSpeed);
-        //smoothInputLook = rawInputLook;
+        smoothInputLook = Vector3.Lerp(smoothInputLook, consumerInputLook, Time.deltaTime * lookSmoothingSpeed);
     }
 
     void UpdatePlayerMovement()
     {
 
         playerMovementBehavior.UpdateMovementData(smoothInputMovement);
-        //rawInputMovement = new Vector3(0.0f, 0.0f, 0.0f);
     }
 
     void UpdatePlayerLook()

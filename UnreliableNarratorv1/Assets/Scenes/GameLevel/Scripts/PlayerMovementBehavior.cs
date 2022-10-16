@@ -10,7 +10,6 @@ public class PlayerMovementBehavior : MonoBehaviour
 
     [Header("Movement Settings")]
     public float movementSpeed = 3f;
-    public float turnSpeed = 0.1f;
 
     private Vector3 movementDirection;
 

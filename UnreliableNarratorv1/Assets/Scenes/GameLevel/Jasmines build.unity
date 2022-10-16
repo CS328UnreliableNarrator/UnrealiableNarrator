@@ -4601,8 +4601,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerRigidbody: {fileID: 632177127}
   cam3D: {fileID: 1246972243}
-  movementSpeed: 3
-  turnSpeed: 0.1
+  movementSpeed: 5
 --- !u!114 &632177125
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4618,7 +4617,7 @@ MonoBehaviour:
   playerMovementBehavior: {fileID: 632177124}
   playerLookBehavior: {fileID: 632177131}
   playerInput: {fileID: 632177126}
-  movementSmoothingSpeed: 1
+  movementSmoothingSpeed: 15
   lookSmoothingSpeed: 15
   interactionPanel: {fileID: 754337082}
   cam3D: {fileID: 1246972245}

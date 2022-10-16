@@ -8,19 +8,20 @@ public class PlayerLookBehavior : MonoBehaviour
     public Camera cam3D;
 
     [Header("Look Settings")]
-    public float lookSensitivity = 10.0f;
-    public float lookSpeedX = 10.0f;
-    public float lookSpeedY = 5.0f;
+    [Range(0.1f, 20.0f)] public float lookSensitivity = 10.0f;
+    [Range(0.1f, 20.0f)] public float lookSpeedX = 10.0f;
+    [Range(0.1f, 10.0f)] public float lookSpeedY = 5.0f;
 
     [Header("Look Sphere")]
     public bool limitLookSphereAboutX = true;
     public bool limitLookSphereAboutY = false;
+
     [Header("(Left to Right)")]
-    public float minX = -90.0f;
-    public float maxX = 90.0f;
+    [Range(-360.0f, 360.0f)] public float minX = -90.0f;
+    [Range(-360.0f, 360.0f)] public float maxX = 90.0f;
     [Header("(Up to Down)")]
-    public float minY = -90.0f;
-    public float maxY = 70.0f;
+    [Range(-360.0f, 360.0f)] public float minY = -90.0f;
+    [Range(-360.0f, 360.0f)] public float maxY = 70.0f;
 
     private Vector3 lookDirection;
 
