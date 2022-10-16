@@ -41,6 +41,7 @@ public class PlayerController : MonoBehaviour
     //Current Input Control Scheme (Gamepad or Mouse+Keyboard)
     private string currentControlScheme;
 
+    public bool playerInteracted = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -89,6 +90,14 @@ public class PlayerController : MonoBehaviour
             rawInputLook = Vector3.zero;
         }
         Debug.Log(string.Format("Raw Look Input: {0}", rawInputLook));
+    }
+
+    public void OnInteract(InputAction.CallbackContext value)
+    {
+        if (cam3D.enabled)
+        {
+            playerInteracted = true;
+        }
     }
 
     public void ToggleCamera(InputAction.CallbackContext value)
