@@ -2,9 +2,11 @@ The story follows our narrator James. James is originally seen talking with his 
 
 Level one focuses on escaping the office. The door to the office wont open and so James has to figure out why. There is information on Camille's computer, one of the other cubicles and the boss' computer. This leads James to the maintence closet to fix the wires that the new maintenance guy messed up. The door is unlocked upon completing the wire puzzle
 
-The rest of the game follows James attempting to find camille. He attempts to solve puzzles along the way. 
+The second level of the game shows James trying to escape the lobby and get outside to the SUV. 
 
 When James finally finds Camille, the player realizes that James created a false sense of reality. The bad guy is actually Camille's husband and not the bad guy after all, Camille and James hardly ever talked and their conversation in the office earlier was completely fabricated by James. James is completely obsessed with Camille and created his own reality in which he and Camille were together. 
+
+Final cut scene that replays the beginning scene but shows what actually happened
 
 
 Extra Info:

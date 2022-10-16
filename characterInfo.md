@@ -1,4 +1,4 @@
-Narrator (Played by player):
+**Narrator (Played by player):**
 
 	Name: James 
 	-Means supplanter or "the deciever." 
@@ -11,7 +11,7 @@ Narrator (Played by player):
 
 
 
-Love Interest
+**Love Interest**
 
 	Name: Camille
 	-Means pure and of unblemished character
@@ -22,7 +22,7 @@ Love Interest
 
 
 
-"Bad Guy"
+**"Bad Guy"**
 
 	Name: Jeff
 	-Means peaceful or serene
@@ -33,7 +33,7 @@ Love Interest
 	-happens to be the janitor
 	
 
-Boss
+**Boss**
 
 	Name: Bossman
 
