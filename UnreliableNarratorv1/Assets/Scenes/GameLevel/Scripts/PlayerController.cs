@@ -41,7 +41,7 @@ public class PlayerController : MonoBehaviour
     //Current Input Control Scheme (Gamepad or Mouse+Keyboard)
     private string currentControlScheme;
 
-    public bool playerInteracted = false;
+    [NonSerialized] public bool playerInteracted = false; //probably should change this to be a unity event
     // Start is called before the first frame update
     void Start()
     {
