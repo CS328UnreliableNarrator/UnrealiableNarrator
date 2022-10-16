@@ -68,14 +68,14 @@ public class PlayerController : MonoBehaviour
     {
         Vector2 inputMovement = value.ReadValue<Vector2>();
         rawInputMovement = new Vector3(inputMovement.x, 0, inputMovement.y);
-        Debug.Log(string.Format("Raw Movement Input: {0}", rawInputMovement));
+        //Debug.Log(string.Format("Raw Movement Input: {0}", rawInputMovement));
     }
 
     public void OnLook(InputAction.CallbackContext value)
     {
         Vector2 inputLook = value.ReadValue<Vector2>();
         rawInputLook = new Vector3(inputLook.x, inputLook.y, 0);
-        Debug.Log(string.Format("Raw Look Input: {0}", rawInputLook));
+        //Debug.Log(string.Format("Raw Look Input: {0}", rawInputLook));
     }
 
     public void ToggleCamera(InputAction.CallbackContext value)
