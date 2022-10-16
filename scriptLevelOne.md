@@ -1,116 +1,57 @@
-//lines with ** are James' internal thoughts. 
-//this * just signifies an action or movement
+Opening Scene
+-------------
 
-Opens on the office. James and Camille are standing at James' desk talking. queue the corny romance ~
+*Opens on the office. James sits in his chair, slowly turning back and forth. He stares mindlessly at his work on his laptop, chewing on a pen.*
 
-Camille: "Did you see how annoyed he was in the meeting this morning? I really don't understand what he expects from us."
+**Camille:** *Casually strides up to the side of his desk.* "We have a problem."
 
-James: "To give up our free will and become his little robots probably."
+**James:** *Spins around to face Camille. He taps the pen against his chin and then points it at her.* "Let me guess...You caused it?" 
 
-Camille: *imitates the boss "Look at me I'm so smart and know everything! Everyone else is stupid blah blah blah." *rolls her eyes
+**Camille:** "HA HA very funny. And no, I didn't cause it."
 
-James: *laughs "You're so cute when you're angry."
+**James:** *Furrows his eyebrows* "Huh that doesn't sound like you."
 
-Camille: *giggles "Stop you're gonna make blush."
+**Camille:** *A smirk tugs at the corner of her mouth.* "This is serious Jay, look at me!"
 
-James: "And? I love making you blush. It's my favorite pass time."
+**James:** *His eyes wash over Camille and widen in surprise as he notices the stains of pinks, yellows, and oranges that cover her once beige dress* "What happened??"
 
-Camille: *smiles "You can be so corny sometimes"
+**Camille:** "That new maintenance guy toppled over me with a tray of smoothies. Tell me why he even had those in the first place!" *She pouts, looking down at her dress, defeated*
 
-James: "Only for you my love"
+**James:** *Stands and walks over to Camille. He goes to pull her in for a hug*
 
-*Camille and James both stare at each other smiling.
+**Camille:** "Aww baby, I don't think you want a hug from me right now, you're going to get smoothie all over you."
 
-Enter bossman.
+**James:** *Laughs.* "Just comer here, you clearly need a hug."
 
-"CAMILLE. JAMES. Back to work! I don't pay you two to stand around and flirt all day" 
+*The two embrace.*
 
-*bossman huffs away leaving a bewildered James and Camille
+**James:** "Feel better my love?"
+
+**Camille:** *Sighs* "Much better. Can we stay like this forever?"
+
+**James:** *Chuckles and plants a kiss on Camille's head* "I wish beautiful, but I don't think Bossman will like that."
+
+**Camille:** *Groans and pulls out of the hug despute James' objections.* "Who cares. That meeting with him this morning was ridiculous. Does he really think he can just overwork us?"
+
+**James:** "Absolutely he does. We're like his little robots."
+
+**Camille:** *Pretends to imitate the boss* "Look at me I'm so smart and know everything! Everyone else is stupid blah blah blah." *Rolls her eyes.*
+
+*James and Camille begin to giggle*
+
+*(far off in office)*
+"CAMILLE. JAMES. Back to work! I don't pay you two to stand around and flirt all day."
+
+*Camille and James stand there bewildered.*
+
+**James:** "Speak of the devil."
+
+Cut Scene
+---------
 
 
 
 
-
-Cut scene
-
-*James stands at the giant office windows watching the bustle of the streets. He checks his phone and looks back at Camille's desk. No sign of her
-
-*Turns back to window. Notices her standing near a black car. She's looking around a lot
-
-**Huh? I wonder if she's okay...I should go check on her.
-
-*James goes to turn away but notices a beefy man stepping out of the car, quickly approaching Camille
-
-**Never seen him before
-
-*Beefy man grabs her arm and pulls her forcefully to the back passenger seats. Shoves her inside and locks the door
-
-**Heart pounding (we can play an audio clip of this). Shit. Shit. Shit. 
-
- *Beefy man then climbs into the car and drives off. James stands there paralyzed.
- 
- **Fuck! I need to do something
- 
- *James rushes to the door. he presses the keypad but it doesn't work, the door won't open
- 
- **What the hell?
- 
- *Presses it again and again. It still won't work.
- 
- **I need to find a way out
- 
- //Queue the start of the actual gameplay
- 
- 
- 
- 
- //Below are James' thoughts when the player interacts with certain parts of the puzzles
- 
-Phrases he can utter throughout. These don't necessarily have to happen at specific moments
- 
- 	**I hope she's okay
- 	**I really need out of here
- 
- 
- 
- Camille's Computer: 
- 	**Maybe I can find something on here
- 	
- 	When the recycle bin is opened and the email is found
- 	**I wonder what this is 
- 	
- 	Reads the email
- 	**Hmm no name...Funny I thought I saw these symbols somewhere
- 	
- Cubicle with colors:
- 
- 	**Got it! I have to go to the boss' computer
- 	
- Boss computer:
- 
- 	**God this guy sucks
- 	
- 	Opens the document on the desktop
- 	**that makes sense! I need to fix the door
- 	
- Maintence closet
- 
- 	Sees the jacket that resembles the frame of the bad guy
- 	**Wait-
- 	...
- 	...
- 	HE WAS THE JANITOR?
- 	
- 	**Why can't I remember what the janitor looks like?
- 	**Shit I really need to find Camille
- 	
- Wire Puzzle
- 	
- 	Upon compeletion of the puzzle
- 	**Yes! Now I can get out of here
- 	
- 
- 
 
 
 
