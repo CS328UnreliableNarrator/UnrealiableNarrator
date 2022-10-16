@@ -48,7 +48,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         UpdatePlayer();
-
+        this.UpdateInteractionFinder();
     }
 
     void UpdatePlayer()
@@ -118,6 +118,23 @@ public class PlayerController : MonoBehaviour
     public void EnableMenuControls()
     {
         playerInput.SwitchCurrentActionMap(actionMapMenuControls);
+    }
+
+    private void UpdateInteractionFinder()
+    {
+        // this function is supposed to check if there is an interactable item withing close distance
+        // on the center of player's screen to allow him to interact with that
+        
+        // TO DO not finished
+        
+        RaycastHit hit;
+        Physics.Raycast(this.transform.position, this.cam3D.transform.forward, out hit);
+
+        if (hit.collider && hit.distance < 10)
+        {
+            // Destroy(hit.collider.gameObject);
+            // Debug.Log(hit.distance);
+        }
     }
 
     public void OnTriggerEnter(Collider collider)
