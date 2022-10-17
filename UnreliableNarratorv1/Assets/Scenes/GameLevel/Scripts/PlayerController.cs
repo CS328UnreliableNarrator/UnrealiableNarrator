@@ -28,6 +28,7 @@ public class PlayerController : MonoBehaviour
     private Vector3 smoothInputLook;
 
     public InteractionPanel interactionPanel;
+    public PointerController pointerController;
 
     [Header("Camera Settings")]
     [SerializeField] private Camera cam3D;
@@ -144,44 +145,52 @@ public class PlayerController : MonoBehaviour
     {
         // this function is supposed to check if there is an interactable item withing close distance
         // on the center of player's screen to allow him to interact with that
-        
-        // TO DO not finished
-        
+
         RaycastHit hit;
-        Physics.Raycast(this.transform.position, this.cam3D.transform.forward, out hit);
+        Physics.Raycast(this.cam3D.transform.position, this.cam3D.transform.forward, out hit);
 
-        if (hit.collider && hit.distance < 10)
+        if (hit.collider && hit.distance < 8)
         {
-            // Destroy(hit.collider.gameObject);
-            // Debug.Log(hit.distance);
+            if (hit.collider.TryGetComponent(out IInteractable interactable))
+            {
+                this.pointerController.SetInteractable(interactable);
+            }
+            else
+            {
+                this.pointerController.UnsetInteractable();
+            }
+        }
+        else
+        {
+            this.pointerController.UnsetInteractable();
         }
     }
 
-    public void OnTriggerEnter(Collider collider)
-    {
-        if (collider.gameObject.tag == "InteractionTrigger")
-        {
-            Debug.Log("Interaction trigger entered!");
-            List<InteractionData> actions = collider.GetComponent<InteractionTrigger>().Actions;
-            for (int i = 0; i < actions.Count; i++)
-            {
-                this.interactionPanel.AddButton(actions[i]);
-            }
-        }
-    }
-    
-    public void OnTriggerExit(Collider collider)
-    {
-        if (collider.gameObject.tag == "InteractionTrigger")
-        {
-            Debug.Log("Interaction trigger exited!");
-            List<InteractionData> actions = collider.GetComponent<InteractionTrigger>().Actions;
-            for (int i = 0; i < actions.Count; i++)
-            {
-                // this.interactionPanel.(actions[i]);
-                // TO DO
-                this.interactionPanel.DeleteButton(actions[i]);
-            }
-        }
-    }  
+    // public void OnTriggerEnter(Collider collider)
+    // {
+    //     if (collider.gameObject.tag == "InteractionTrigger")
+    //     {
+    //         Debug.Log("Interaction trigger entered!");
+    //         List<InteractionData> actions = collider.GetComponent<InteractionTrigger>().Actions;
+    //         for (int i = 0; i < actions.Count; i++)
+    //         {
+    //             this.interactionPanel.AddButton(actions[i]);
+    //         }
+    //     }
+    // }
+    //
+    // public void OnTriggerExit(Collider collider)
+    // {
+    //     if (collider.gameObject.tag == "InteractionTrigger")
+    //     {
+    //         Debug.Log("Interaction trigger exited!");
+    //         List<InteractionData> actions = collider.GetComponent<InteractionTrigger>().Actions;
+    //         for (int i = 0; i < actions.Count; i++)
+    //         {
+    //             // this.interactionPanel.(actions[i]);
+    //             // TO DO
+    //             this.interactionPanel.DeleteButton(actions[i]);
+    //         }
+    //     }
+    // }
 }
