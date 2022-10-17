@@ -85,6 +85,10 @@ public class Interactor : MonoBehaviour
             //     if (!playerDefaultReticle.activeSelf) ToggleReticle();
             // }
         }
+        else
+        {
+            playerController.playerInteracted = false;
+        }
     }
     private void ToggleReticle()
     {
