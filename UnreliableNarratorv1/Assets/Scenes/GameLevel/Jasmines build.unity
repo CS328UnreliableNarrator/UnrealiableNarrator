@@ -4624,7 +4624,6 @@ MonoBehaviour:
   cam3D: {fileID: 1246972245}
   cam2D: {fileID: 19375295}
   cam3DInitialized: 1
-  playerInteracted: 0
 --- !u!114 &632177126
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4840,12 +4839,11 @@ MonoBehaviour:
   interactableMask:
     serializedVersion: 2
     m_Bits: 64
-  interactImage: {fileID: 0}
-  defaultIcon: {fileID: -2413806693520163455, guid: 303e66fe588766a4da1e02891cb4b61b, type: 3}
-  defaultInteractIcon: {fileID: -2413806693520163455, guid: 303e66fe588766a4da1e02891cb4b61b, type: 3}
   numFound: 0
   player: {fileID: 632177122}
   playerController: {fileID: 632177125}
+  playerDefaultReticle: {fileID: 2573362247163311586, guid: 8e1dc3148ba63de44a5b774d18765186, type: 3}
+  playerInteractReticle: {fileID: 3523751146260010704, guid: 627a216045bb13f4fb94ea2f07a899be, type: 3}
 --- !u!1001 &632423426
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7363,7 +7361,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prompt: 
-  icon: {fileID: 0}
   id: 0
 --- !u!1001 &1137321498
 PrefabInstance:
