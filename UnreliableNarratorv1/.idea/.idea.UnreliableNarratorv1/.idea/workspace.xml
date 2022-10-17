@@ -3,10 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="e691e0c5-a0cb-4546-ac20-81fab1f3f978" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UnreliableNarratorv1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnreliableNarratorv1/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameLevel/Jasmines build.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameLevel/Jasmines build.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameLevel/Scripts/Interactor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameLevel/Scripts/Interactor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameLevel/Scripts/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameLevel/Scripts/PlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameLevel/UI/Prefabs/InteractReticle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameLevel/UI/Prefabs/InteractReticle.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameLevel/UI/NewDot/PointerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameLevel/UI/NewDot/PointerController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

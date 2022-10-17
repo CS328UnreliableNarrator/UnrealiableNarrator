@@ -36,12 +36,10 @@ public class Interactor : MonoBehaviour
     }
     private void LateUpdate()
     {
-        numFound = Physics.OverlapSphereNonAlloc(interactionPoint.position, interactionPointRadius, colliders, interactableMask);
-
-        if(numFound > 0)
+        if (this.playerController.pointerController.isActive)
         {
             if(!playerInteractReticle.activeSelf) ToggleReticle();
-            var interactable = colliders[0].GetComponent<IInteractable>();
+            var interactable = this.playerController.pointerController.Interactable;
             if(interactable != null && playerController.playerInteracted)
             {
                 Debug.Log("e was pressed");
@@ -54,12 +52,38 @@ public class Interactor : MonoBehaviour
                 playerController.playerInteracted = false;
                 interactable.Interact(this);
             }
-        }
-        else
-        {
-            //clear the flag, as it should only be consumed when sphere is colliding and interactable
-            playerController.playerInteracted = false;
-            if (!playerDefaultReticle.activeSelf) ToggleReticle();
+            else
+            {
+                // clear the flag, as it should only be consumed when sphere is colliding and interactable
+                playerController.playerInteracted = false;
+                if (!playerDefaultReticle.activeSelf) ToggleReticle();
+            }
+            
+            // numFound = Physics.OverlapSphereNonAlloc(interactionPoint.position, interactionPointRadius, colliders, interactableMask);
+            //
+            // if(numFound > 0)
+            // {
+            //     if(!playerInteractReticle.activeSelf) ToggleReticle();
+            //     var interactable = colliders[0].GetComponent<IInteractable>();
+            //     if(interactable != null && playerController.playerInteracted)
+            //     {
+            //         Debug.Log("e was pressed");
+            //         float x = player.transform.position.x;
+            //         float y = player.transform.position.y;
+            //         float z = player.transform.position.y;
+            //         PlayerPrefs.SetFloat("x", x);
+            //         PlayerPrefs.SetFloat("y", y);
+            //         PlayerPrefs.SetFloat("z", z);
+            //         playerController.playerInteracted = false;
+            //         interactable.Interact(this);
+            //     }
+            // }
+            // else
+            // {
+            //     //clear the flag, as it should only be consumed when sphere is colliding and interactable
+            //     playerController.playerInteracted = false;
+            //     if (!playerDefaultReticle.activeSelf) ToggleReticle();
+            // }
         }
     }
     private void ToggleReticle()

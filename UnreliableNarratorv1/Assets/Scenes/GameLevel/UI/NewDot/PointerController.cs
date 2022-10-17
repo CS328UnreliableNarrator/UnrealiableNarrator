@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class PointerController : MonoBehaviour
 {
-    private bool isActive = false;
+    public bool isActive = false;
     public IInteractable Interactable;
     public GameObject text;
     // Start is called before the first frame update
