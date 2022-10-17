@@ -149,7 +149,7 @@ public class PlayerController : MonoBehaviour
         RaycastHit hit;
         Physics.Raycast(this.cam3D.transform.position, this.cam3D.transform.forward, out hit);
 
-        if (hit.collider && hit.distance < 8)
+        if (hit.collider && hit.distance < 3)
         {
             if (hit.collider.TryGetComponent(out IInteractable interactable))
             {
