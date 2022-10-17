@@ -1,14 +1,14 @@
 **Concerns about Maintenance Employee**
 
-Hello Camille,
+	Hello Camille,
 
-I have scheduled a meeting with our new maintanence employee for next Thursday at 11 am. Please let me know if you can attend. We will be discussing his "apparent lack of knowledge" so to say. 
+	I have scheduled a meeting with our new maintanence employee for next 	Thursday at 11 am. Please let me know if you can attend. We will be discussing his "apparent lack of knowledge" so to say. 
 
-Once again, I apologize for your "altercation" this morning. Have a good weekend!
+	Once again, I apologize for your "altercation" this morning. Have a good weekend!
 
 
-Thanks!
-)*$$&^#
+	Thanks!
+	)*$$&^#
 
 
 

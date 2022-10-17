@@ -44,7 +44,7 @@ Opening Scene
 
 *Camille and James stand there bewildered.*
 
-**James:** "Speak of the devil."
+**James:** "Until next time beautiful."
 
 Cut Scene
 ---------
