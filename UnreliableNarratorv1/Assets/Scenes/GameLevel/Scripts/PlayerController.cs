@@ -94,7 +94,7 @@ public class PlayerController : MonoBehaviour
 
     public void OnInteract(InputAction.CallbackContext value)
     {
-        if (cam3D.enabled)
+        if (cam3D.enabled && value.canceled)
         {
             playerInteracted = true;
         }
