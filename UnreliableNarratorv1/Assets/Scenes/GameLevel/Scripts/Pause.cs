@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class pause : MonoBehaviour
+public class Pause : MonoBehaviour
 {
 	
 	public GameObject Background;
@@ -21,7 +21,7 @@ public class pause : MonoBehaviour
 		
 	}
 	
-	public void Pause(){
+	public void pause(){
 		if(Time.timeScale == 1){
 			Time.timeScale = 0;
 		}	
@@ -44,6 +44,10 @@ public class pause : MonoBehaviour
 			QuitBTN.SetActive(false);
 		
 		
+	}
+	
+	public void quit(){
+        Application.Quit();
 	}
 
 	

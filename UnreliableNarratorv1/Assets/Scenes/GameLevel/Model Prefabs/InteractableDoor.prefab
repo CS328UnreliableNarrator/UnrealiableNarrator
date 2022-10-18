@@ -390,7 +390,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a929eee4e0ea0754f856c7f3af50b28c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prompt: 
+  prompt: Open Door
   id: 0
   speed: 5
   angle: 120
