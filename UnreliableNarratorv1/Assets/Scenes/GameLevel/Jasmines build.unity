@@ -6259,6 +6259,22 @@ MonoBehaviour:
         m_CallState: 1
     m_ActionId: 19d2c8de-c4ff-457e-9982-70830bb73ad1
     m_ActionName: PlayerControls/Interact[/Keyboard/e]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 26743705}
+        m_TargetAssemblyTypeName: Pause, Assembly-CSharp
+        m_MethodName: Toggle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: fbc42379-2196-4681-ac15-26090aff4a6e
+    m_ActionName: PlayerControls/Pause Menu Toggle[/Keyboard/escape]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Keyboard+Mouse
   m_DefaultActionMap: PlayerControls

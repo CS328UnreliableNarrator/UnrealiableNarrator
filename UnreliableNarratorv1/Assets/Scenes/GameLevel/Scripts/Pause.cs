@@ -18,7 +18,7 @@ public class Pause : MonoBehaviour
 		Background.SetActive(false);
 		ResumeBTN.SetActive(false);
 		QuitBTN.SetActive(false);
-		
+		Cursor.visible = false;
 	}
 	
 	public void pause(){
@@ -29,7 +29,7 @@ public class Pause : MonoBehaviour
 			Background.SetActive(true);
 			ResumeBTN.SetActive(true);
 			QuitBTN.SetActive(true);
-		
+		Cursor.visible = true;
 		
 	}
 	
@@ -42,10 +42,19 @@ public class Pause : MonoBehaviour
 			Background.SetActive(false);
 			ResumeBTN.SetActive(false);
 			QuitBTN.SetActive(false);
-		
+		Cursor.visible = false;
 		
 	}
 	
+	public void Toggle()
+    {
+		if (Time.timeScale == 0)
+			Resume();
+		else if (Time.timeScale == 1)
+			pause();
+		else
+			Debug.LogError("Somehow time scale is neither 0 or 1");
+    }
 	public void quit(){
         Application.Quit();
 	}
