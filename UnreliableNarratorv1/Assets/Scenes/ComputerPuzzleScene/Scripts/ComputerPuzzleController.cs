@@ -5,6 +5,8 @@ using UnityEngine;
 public class ComputerPuzzleController : MonoBehaviour
 {
     public GameObject emailWindow;
+    public GameObject controlPanelWindow;
+    public GameObject menuStart;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,5 +22,15 @@ public class ComputerPuzzleController : MonoBehaviour
     public void ToggleEmailWindow()
     {
         this.emailWindow.SetActive(!this.emailWindow.activeSelf);
+    }
+    
+    public void ToggleControlPanelWindow()
+    {
+        this.controlPanelWindow.SetActive(!this.controlPanelWindow.activeSelf);
+    }
+    
+    public void ToggleMenuStart()
+    {
+        this.menuStart.SetActive(!this.menuStart.activeSelf);
     }
 }

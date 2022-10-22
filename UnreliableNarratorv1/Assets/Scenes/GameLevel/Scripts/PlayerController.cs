@@ -78,7 +78,7 @@ public class PlayerController : MonoBehaviour
             consumerInputMovement = rawInputMovement;
             rawInputMovement = Vector3.zero;
         }
-        Debug.Log(string.Format("Raw Movement Input: {0}", rawInputMovement));
+        //Debug.Log(string.Format("Raw Movement Input: {0}", rawInputMovement));
     }
 
     public void OnLook(InputAction.CallbackContext value)
@@ -90,7 +90,7 @@ public class PlayerController : MonoBehaviour
             consumerInputLook = rawInputLook;
             rawInputLook = Vector3.zero;
         }
-        Debug.Log(string.Format("Raw Look Input: {0}", rawInputLook));
+        //Debug.Log(string.Format("Raw Look Input: {0}", rawInputLook));
     }
 
     public void OnInteract(InputAction.CallbackContext value)

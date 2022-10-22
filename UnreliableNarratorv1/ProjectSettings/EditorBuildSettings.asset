@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/WireScene/WireScene.unity
     guid: 8a25213e8a694ed4a97ab72ec480a211
+  - enabled: 1
+    path: Assets/Scenes/EndScreen/EndScreen.unity
+    guid: adf52f4ec4ef0c1419a51fb1fea53dea
   m_configObjects: {}
