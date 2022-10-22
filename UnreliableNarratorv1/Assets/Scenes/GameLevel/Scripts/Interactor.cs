@@ -48,7 +48,7 @@ public class Interactor : MonoBehaviour
             float zRot = PlayerPrefs.GetFloat("zRot");
             Vector3 rotation = new Vector3(xRot, yRot, zRot);
             Debug.Log("Rotation: " + rotation);
-            fpsCam.transform.eulerAngles = rotation;
+            fpsCam.transform.Rotate(rotation);
             PlayerPrefs.DeleteKey("xRot");
             PlayerPrefs.DeleteKey("yRot");
             PlayerPrefs.DeleteKey("zRot");
@@ -72,9 +72,9 @@ public class Interactor : MonoBehaviour
                 PlayerPrefs.SetFloat("y", y);
                 PlayerPrefs.SetFloat("z", z);
 
-                float xRot = fpsCam.transform.rotation.x;
-                float yRot = fpsCam.transform.rotation.y;
-                float zRot = fpsCam.transform.rotation.z;
+                float xRot = fpsCam.transform.rotation.eulerAngles.x;
+                float yRot = fpsCam.transform.rotation.eulerAngles.y;
+                float zRot = fpsCam.transform.rotation.eulerAngles.z;
                 PlayerPrefs.SetFloat("xRot", xRot);
                 PlayerPrefs.SetFloat("yRot", yRot);
                 PlayerPrefs.SetFloat("zRot", zRot);
