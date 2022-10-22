@@ -54,6 +54,15 @@ public class PatternController : MonoBehaviour
         this.TemporaryLineController.gameObject.SetActive(false);
     }
 
+    private void OnEnable()
+    {
+        Cursor.visible = true;
+    }
+
+    private void OnDisable()
+    {
+        Cursor.visible = false;
+    }
     public void Connect(int from, int to)
     {
         // Add connection as line representation

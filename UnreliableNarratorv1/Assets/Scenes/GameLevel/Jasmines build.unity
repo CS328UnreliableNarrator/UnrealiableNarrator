@@ -6403,9 +6403,11 @@ MonoBehaviour:
     m_Bits: 64
   numFound: 0
   player: {fileID: 632177122}
+  fpsCam: {fileID: 1246972242}
   playerController: {fileID: 632177125}
   playerDefaultReticle: {fileID: 2573362247163311586, guid: 8e1dc3148ba63de44a5b774d18765186, type: 3}
   playerInteractReticle: {fileID: 3523751146260010704, guid: 627a216045bb13f4fb94ea2f07a899be, type: 3}
+  keys: 
 --- !u!1001 &632423426
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -13,6 +13,15 @@ public class Main : MonoBehaviour
     {
         Instance = this;
     }
+    public void OnEnable()
+    {
+        Cursor.visible = true;
+    }
+
+    public void OnDisable()
+    {
+        Cursor.visible = false;
+    }
     public void UpdateCount(int points)
     {
         onCount = onCount + points;

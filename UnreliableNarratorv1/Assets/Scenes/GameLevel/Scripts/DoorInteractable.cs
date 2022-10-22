@@ -35,7 +35,7 @@ public class DoorInteractable : MonoBehaviour, IInteractable
     void FixedUpdate()
     {
         if (state == DoorState.Changing) RotateDoor();
-        Debug.Log(string.Format("{0}->{1}", from.ToString(), state.ToString()));
+        //Debug.Log(string.Format("{0}->{1}", from.ToString(), state.ToString()));
     }
     public bool Interact(Interactor interactor)
     {
@@ -49,7 +49,7 @@ public class DoorInteractable : MonoBehaviour, IInteractable
         {
             from = state;
             state = DoorState.Changing;
-            Debug.Log(string.Format("{0}->{1}", from.ToString(), state.ToString()));
+            //Debug.Log(string.Format("{0}->{1}", from.ToString(), state.ToString()));
         }
     }
     void RotateDoor()

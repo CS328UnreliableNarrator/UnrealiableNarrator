@@ -15,24 +15,45 @@ public class Interactor : MonoBehaviour
     [SerializeField] private int numFound;
 
     [SerializeField] private GameObject player;
+    [SerializeField] private GameObject fpsCam;
     [SerializeField] private PlayerController playerController;
     [SerializeField] private GameObject playerDefaultReticle;
     [SerializeField] private GameObject playerInteractReticle;
-
+    [SerializeField] private List<int> keys;
     private void Start()
     {
         playerInteractReticle.SetActive(false);
-        if(PlayerPrefs.HasKey("x") && PlayerPrefs.HasKey("y") && PlayerPrefs.HasKey("z"))
+    }
+
+    private void OnEnable()
+    {
+        if (PlayerPrefs.HasKey("x") && PlayerPrefs.HasKey("y") && PlayerPrefs.HasKey("z"))
         {
+            Debug.Log("Position should change now");
             float x = PlayerPrefs.GetFloat("x");
             float y = PlayerPrefs.GetFloat("y");
             float z = PlayerPrefs.GetFloat("z");
             Vector3 position = new Vector3(x, y, z);
+            Debug.Log("Position: " + position);
             player.transform.position = position;
             PlayerPrefs.DeleteKey("x");
             PlayerPrefs.DeleteKey("y");
             PlayerPrefs.DeleteKey("z");
         }
+
+        if (PlayerPrefs.HasKey("xRot") && PlayerPrefs.HasKey("yRot") && PlayerPrefs.HasKey("zRot"))
+        {
+            float xRot = PlayerPrefs.GetFloat("xRot");
+            float yRot = PlayerPrefs.GetFloat("yRot");
+            float zRot = PlayerPrefs.GetFloat("zRot");
+            Vector3 rotation = new Vector3(xRot, yRot, zRot);
+            Debug.Log("Rotation: " + rotation);
+            fpsCam.transform.eulerAngles = rotation;
+            PlayerPrefs.DeleteKey("xRot");
+            PlayerPrefs.DeleteKey("yRot");
+            PlayerPrefs.DeleteKey("zRot");
+        }
+
     }
     private void LateUpdate()
     {
@@ -45,10 +66,18 @@ public class Interactor : MonoBehaviour
                 Debug.Log("e was pressed");
                 float x = player.transform.position.x;
                 float y = player.transform.position.y;
-                float z = player.transform.position.y;
+                float z = player.transform.position.z;
+                Debug.Log("x: " + x + ", y: " + y + " z: " + z);
                 PlayerPrefs.SetFloat("x", x);
                 PlayerPrefs.SetFloat("y", y);
                 PlayerPrefs.SetFloat("z", z);
+
+                float xRot = fpsCam.transform.rotation.x;
+                float yRot = fpsCam.transform.rotation.y;
+                float zRot = fpsCam.transform.rotation.z;
+                PlayerPrefs.SetFloat("xRot", xRot);
+                PlayerPrefs.SetFloat("yRot", yRot);
+                PlayerPrefs.SetFloat("zRot", zRot);
                 playerController.playerInteracted = false;
                 interactable.Interact(this);
             }
