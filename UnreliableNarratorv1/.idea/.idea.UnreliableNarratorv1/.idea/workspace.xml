@@ -2,13 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e691e0c5-a0cb-4546-ac20-81fab1f3f978" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnreliableNarratorv1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnreliableNarratorv1/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/ComputerPuzzleScene/ComputerPuzzle.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ComputerPuzzleScene/ComputerPuzzle.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/ComputerPuzzleScene/Scripts/ComputerPuzzleController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ComputerPuzzleScene/Scripts/ComputerPuzzleController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameLevel/Jasmines build.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameLevel/Jasmines build.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameLevel/Model Prefabs/Chair.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameLevel/Model Prefabs/Chair.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameLevel/UI/Prefabs/InteractReticle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameLevel/UI/Prefabs/InteractReticle.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
