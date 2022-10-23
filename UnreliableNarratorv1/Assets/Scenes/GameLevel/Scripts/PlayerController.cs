@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.EventSystems;
+using UnityEngine.InputSystem.Interactions;
 
 public class PlayerController : MonoBehaviour
 {
@@ -29,6 +30,7 @@ public class PlayerController : MonoBehaviour
 
     public InteractionPanel interactionPanel;
     public PointerController pointerController;
+    public PauseController pauseController;
 
     [Header("Camera Settings")]
     [SerializeField] private Camera cam3D;
@@ -99,6 +101,15 @@ public class PlayerController : MonoBehaviour
         {
             playerInteracted = true;
         }
+    }
+
+    public void OnPause(InputAction.CallbackContext value)
+    {
+        if(value.performed) pauseController.TogglePause();
+    }
+    public void OnQuit()
+    {
+        Application.Quit();
     }
 
     public void ToggleCamera(InputAction.CallbackContext value)

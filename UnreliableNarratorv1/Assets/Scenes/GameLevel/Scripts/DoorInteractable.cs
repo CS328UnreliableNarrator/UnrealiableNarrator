@@ -11,8 +11,9 @@ public enum DoorState
 public class DoorInteractable : MonoBehaviour, IInteractable
 {
     [SerializeField] private string prompt;
+    [SerializeField] private string promptFail;
     public string InteractionPrompt => prompt;
-
+    public string interactFail => promptFail;
     [SerializeField] private int id;
     public int interactID => id;
     private DoorState from;
