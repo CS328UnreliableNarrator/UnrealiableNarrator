@@ -19,7 +19,7 @@ public class Interactor : MonoBehaviour
     [SerializeField] private PlayerController playerController;
     [SerializeField] private GameObject playerDefaultReticle;
     [SerializeField] private GameObject playerInteractReticle;
-    [SerializeField] private List<int> keys;
+    [SerializeField] private PointerController pointer;
     private void Start()
     {
         playerInteractReticle.SetActive(false);
@@ -128,5 +128,10 @@ public class Interactor : MonoBehaviour
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(interactionPoint.position, interactionPointRadius);
+    }
+
+    public PointerController Pointer
+    {
+        get { return pointer; }
     }
 }

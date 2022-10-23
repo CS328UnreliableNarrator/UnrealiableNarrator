@@ -31,11 +31,11 @@ public class PointerController : MonoBehaviour
             this.SetName(interactable.InteractionPrompt);
         }
     }
-
-    private void SetName(string name)
+    public void SetName(string name)
     {
         Debug.Log("Set name = " + name);
         this.text.GetComponent<TextMeshProUGUI>().text = name;
+        this.text.GetComponent<TextMeshProUGUI>().ForceMeshUpdate();
     }
 
     public void UnsetInteractable()

@@ -4070,6 +4070,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prompt: Use Bossman's Computer
+  promptFail: This Computer is Locked!
   id: 0
 --- !u!1001 &389655012
 PrefabInstance:
@@ -7253,7 +7254,7 @@ MonoBehaviour:
   playerController: {fileID: 632177125}
   playerDefaultReticle: {fileID: 2573362247163311586, guid: 8e1dc3148ba63de44a5b774d18765186, type: 3}
   playerInteractReticle: {fileID: 3523751146260010704, guid: 627a216045bb13f4fb94ea2f07a899be, type: 3}
-  keys: 
+  pointer: {fileID: 532254674}
 --- !u!114 &632177133
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19396,6 +19397,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prompt: Fix Wires
+  promptFail: 
   id: 0
 --- !u!64 &1740058455
 MeshCollider:
@@ -20674,6 +20676,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 2101100194}
     m_Modifications:
+    - target: {fileID: 4345474470774296528, guid: 9e07abd12bb114fd383fb35cc8c1d01e, type: 3}
+      propertyPath: m_enableWordWrapping
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8636521129876457557, guid: 9e07abd12bb114fd383fb35cc8c1d01e, type: 3}
       propertyPath: m_Name
       value: Pointer

@@ -5,15 +5,38 @@ using UnityEngine.SceneManagement;
 public class ComputerInteractable : MonoBehaviour, IInteractable
 {
     [SerializeField] private string prompt;
+    [SerializeField] private string promptFail;
     public string InteractionPrompt => prompt;
 
+    public string interactFail => promptFail;
     [SerializeField] private int id;
     public int interactID => id;
 
     public bool Interact(Interactor interactor)
     {
-        Debug.Log("Using Computer!");
-        SceneManager.LoadScene(2); //TODO, make unique
-        return true;
+        bool locked;
+        if (PlayerPrefs.HasKey("PCLock"))
+        {
+            locked = System.Convert.ToBoolean(PlayerPrefs.GetInt("PCLock"));
+            Debug.Log("Locked: " + locked);
+            if (!locked)
+            {
+                Debug.Log("Using Computer!");
+                SceneManager.LoadScene(2); //TODO, make unique
+                return true;
+            }
+            else
+            {
+                interactor.Pointer.SetName(promptFail);
+                return false;
+            }
+        }
+        else
+        {
+            Debug.Log("Prompt Fail: " + promptFail);
+            PointerController pointer = interactor.Pointer;
+            pointer.SetName(promptFail);
+            return false;
+        }
     }
 }
