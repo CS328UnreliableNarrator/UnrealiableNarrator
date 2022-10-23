@@ -15,6 +15,7 @@ public class PauseController : MonoBehaviour
     void Start()
     {
         pauseScreen.SetActive(false);
+        Cursor.visible = isPaused;
     }
     void Pause()
     {
@@ -33,6 +34,7 @@ public class PauseController : MonoBehaviour
         {
             isDelayActive = true;
             isPaused = !isPaused;
+            Cursor.visible = isPaused;
             Time.timeScale = ((isPaused) ? 0.0f : 1.0f);
             if (!isPaused) Resume();
             else if (isPaused) Pause();
