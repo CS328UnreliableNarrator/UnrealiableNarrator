@@ -27,6 +27,8 @@ public class Main : MonoBehaviour
         onCount = onCount + points;
         if (onCount == correctCount)
         {
+            FindObjectOfType<AudioManager>().Play("WireBoxPuzzleWireWin");
+
             // This is a placeholder, I'm not sure where this puzzle will end up going
             SceneManager.LoadScene(1);
         }

@@ -80,6 +80,7 @@ public class PatternController : MonoBehaviour
         
         // ending position
         newLineRenderer.SetPosition(1, this.GetDotPositionFromIndex(to));
+        FindObjectOfType<AudioManager>().Play("NinePinPuzzleNodeConnect");
     }
 
     private void ClearConnections(bool useExitAnimation = false)
@@ -164,6 +165,7 @@ public class PatternController : MonoBehaviour
         if (this.IsDrawnPatternCorrect())
         {
             Debug.Log("PATTERN CORRECT");
+            FindObjectOfType<AudioManager>().Play("NinePinPuzzleWin");
             for (int i = 0; i < this.Connections.Count; i++)
             {
                 this.Connections[i].LineObject.GetComponent<LineController>().PlayCorrectPatternAnimation();
@@ -179,6 +181,7 @@ public class PatternController : MonoBehaviour
         else
         {
             Debug.Log("PATTERN WRONG!!!");
+            FindObjectOfType<AudioManager>().Play("NinePinPuzzleFail");
             for (int i = 0; i < this.Connections.Count; i++)
             {
                 this.Connections[i].LineObject.GetComponent<LineController>().PlayWrongPatternAnimation();

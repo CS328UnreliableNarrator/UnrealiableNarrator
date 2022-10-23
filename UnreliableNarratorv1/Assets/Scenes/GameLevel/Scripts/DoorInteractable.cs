@@ -6,7 +6,8 @@ public enum DoorState
 {
     Open,
     Closed,
-    Changing
+    Changing,
+    Locked
 }
 public class DoorInteractable : MonoBehaviour, IInteractable
 {
@@ -16,6 +17,11 @@ public class DoorInteractable : MonoBehaviour, IInteractable
     public string interactFail => promptFail;
     [SerializeField] private int id;
     public int interactID => id;
+    [SerializeField] private string OnSuccess;
+    public string OnInteractSuccessSoundName => OnSuccess;
+    [SerializeField] string OnFail;
+    public string OnInteractFailSoundName => OnFail;
+
     private DoorState from;
     private DoorState state;
     private Quaternion closed;
@@ -46,10 +52,15 @@ public class DoorInteractable : MonoBehaviour, IInteractable
     }
     void ToggleDoor()
     {
-        if (state != DoorState.Changing)
+        if(state == DoorState.Locked)
+        {
+            FindObjectOfType<AudioManager>().Play(OnFail); //as it stands when/if this is set up, there's no delay on input, thus audio couild be spammed
+        }
+        else if (state != DoorState.Changing)
         {
             from = state;
             state = DoorState.Changing;
+            FindObjectOfType<AudioManager>().Play(OnSuccess);
             //Debug.Log(string.Format("{0}->{1}", from.ToString(), state.ToString()));
         }
     }

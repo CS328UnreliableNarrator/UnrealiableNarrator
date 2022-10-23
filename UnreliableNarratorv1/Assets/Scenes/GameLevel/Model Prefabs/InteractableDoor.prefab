@@ -391,7 +391,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prompt: Open Door
+  promptFail: 
   id: 0
+  OnSuccess: DoorSuccess
+  OnFail: DoorFail
   speed: 5
   angle: 120
 --- !u!1 &5286634223680335838

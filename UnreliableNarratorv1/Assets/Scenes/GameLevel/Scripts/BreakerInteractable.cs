@@ -12,8 +12,14 @@ public class BreakerInteractable : MonoBehaviour, IInteractable
     public string interactFail => promptFail;
     public int interactID => id;
 
+    [SerializeField] private string OnSuccess;
+    public string OnInteractSuccessSoundName => OnSuccess;
+    [SerializeField] string OnFail;
+    public string OnInteractFailSoundName => OnFail;
+
     public bool Interact(Interactor interactor)
     {
+        FindObjectOfType<AudioManager>().Play("WireBoxSuccess"); //Successful interact
         SceneManager.LoadScene(3); //TODO, make unique
         return true;
     }

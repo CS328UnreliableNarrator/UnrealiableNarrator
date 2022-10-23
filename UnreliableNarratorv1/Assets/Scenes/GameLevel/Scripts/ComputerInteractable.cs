@@ -12,6 +12,11 @@ public class ComputerInteractable : MonoBehaviour, IInteractable
     [SerializeField] private int id;
     public int interactID => id;
 
+    [SerializeField] private string OnSuccess;
+    public string OnInteractSuccessSoundName => OnSuccess;
+    [SerializeField] string OnFail;
+    public string OnInteractFailSoundName => OnFail;
+
     public bool Interact(Interactor interactor)
     {
         bool locked;
@@ -22,17 +27,20 @@ public class ComputerInteractable : MonoBehaviour, IInteractable
             if (!locked)
             {
                 Debug.Log("Using Computer!");
+                FindObjectOfType<AudioManager>().Play(OnSuccess);
                 SceneManager.LoadScene(2); //TODO, make unique
                 return true;
             }
             else
             {
+                
                 interactor.Pointer.SetName(promptFail);
                 return false;
             }
         }
         else
         {
+            FindObjectOfType<AudioManager>().Play(OnFail);
             Debug.Log("Prompt Fail: " + promptFail);
             PointerController pointer = interactor.Pointer;
             pointer.SetName(promptFail);

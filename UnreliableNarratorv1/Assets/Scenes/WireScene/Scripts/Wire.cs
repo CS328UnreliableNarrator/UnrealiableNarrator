@@ -27,6 +27,7 @@ public class Wire : MonoBehaviour
                 UpdateWire(collider.transform.position);
                 if(transform.parent.name.Equals(collider.transform.parent.name))
                 {
+                    FindObjectOfType<AudioManager>().Play("WireBoxPuzzleWireConnect");
                     Main.Instance.UpdateCount(1);
                     collider.GetComponent<Wire>()?.Done();
                     Done();

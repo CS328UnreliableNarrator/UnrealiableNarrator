@@ -4072,6 +4072,8 @@ MonoBehaviour:
   prompt: Use Bossman's Computer
   promptFail: This Computer is Locked!
   id: 0
+  OnSuccess: 
+  OnFail: 
 --- !u!1001 &389655012
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7014,6 +7016,7 @@ MonoBehaviour:
   lookSmoothingSpeed: 15
   interactionPanel: {fileID: 754337082}
   pointerController: {fileID: 532254674}
+  pauseController: {fileID: 632177133}
   cam3D: {fileID: 1246972245}
   cam2D: {fileID: 19375295}
   cam3DInitialized: 1
@@ -19399,6 +19402,8 @@ MonoBehaviour:
   prompt: Fix Wires
   promptFail: 
   id: 0
+  OnSuccess: 
+  OnFail: 
 --- !u!64 &1740058455
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -23770,6 +23775,65 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 3420f55c88ba84642bf3b0364a9e70f2, type: 3}
+--- !u!1001 &7129242650197435567
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3324094141363622858, guid: 4814712b928ddd64b811bcdcd2365314, type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3324094141363622858, guid: 4814712b928ddd64b811bcdcd2365314, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3324094141363622858, guid: 4814712b928ddd64b811bcdcd2365314, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3324094141363622858, guid: 4814712b928ddd64b811bcdcd2365314, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3324094141363622858, guid: 4814712b928ddd64b811bcdcd2365314, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3324094141363622858, guid: 4814712b928ddd64b811bcdcd2365314, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3324094141363622858, guid: 4814712b928ddd64b811bcdcd2365314, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3324094141363622858, guid: 4814712b928ddd64b811bcdcd2365314, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3324094141363622858, guid: 4814712b928ddd64b811bcdcd2365314, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3324094141363622858, guid: 4814712b928ddd64b811bcdcd2365314, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3324094141363622858, guid: 4814712b928ddd64b811bcdcd2365314, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6898857573487753558, guid: 4814712b928ddd64b811bcdcd2365314, type: 3}
+      propertyPath: m_Name
+      value: AudioManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4814712b928ddd64b811bcdcd2365314, type: 3}
 --- !u!1001 &7169068739925054553
 PrefabInstance:
   m_ObjectHideFlags: 0
