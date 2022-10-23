@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.TextCore.Text;
 
 public class PlayerLookBehavior : MonoBehaviour
 {
@@ -8,9 +9,9 @@ public class PlayerLookBehavior : MonoBehaviour
     public Camera cam3D;
 
     [Header("Look Settings")]
-    [Range(0.1f, 20.0f)] public float lookSensitivity = 10.0f;
+    [Range(0.1f, 20.0f)] public float lookSensitivity = 5.0f;
     [Range(0.1f, 20.0f)] public float lookSpeedX = 10.0f;
-    [Range(0.1f, 10.0f)] public float lookSpeedY = 5.0f;
+    [Range(0.1f, 20.0f)] public float lookSpeedY = 10.0f;
 
     [Header("Look Sphere")]
     public bool limitLookSphereAboutX = true;
@@ -28,7 +29,7 @@ public class PlayerLookBehavior : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        Cursor.lockState = CursorLockMode.Confined;
     }
 
     public void UpdateLookData(Vector3 newLookDirection)
@@ -36,10 +37,6 @@ public class PlayerLookBehavior : MonoBehaviour
         lookDirection = newLookDirection;
     }
     // Update is called once per frame
-    void Update()
-    {
-
-    }
 
     void FixedUpdate()
     {
@@ -48,13 +45,14 @@ public class PlayerLookBehavior : MonoBehaviour
 
     void MovePlayerLook()
     {
+        
         Vector3 look = lookDirection * lookSensitivity * Time.deltaTime;
         Vector3 currentLook = cam3D.transform.localEulerAngles;
 
         //I know this looks wrong but it isn't, this is "rotation about an axis"
         currentLook.x += -look.y * lookSpeedY;
         currentLook.y += look.x * lookSpeedX;
-
+        
         if (limitLookSphereAboutX)
         {
             if (currentLook.x > 180)

@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     [Header("Behaviors")]
     public PlayerMovementBehavior playerMovementBehavior;
     public PlayerLookBehavior playerLookBehavior;
+    public GroundCheck groundCheck;
 
     [Header("Input Settings")]
     public PlayerInput playerInput;
@@ -27,6 +28,10 @@ public class PlayerController : MonoBehaviour
     private Vector3 rawInputLook;
     private Vector3 consumerInputLook;
     private Vector3 smoothInputLook;
+
+    [Range(1.0f, 10.0f)]private float lookSensitivity = 2.0f;
+    private Vector2 frameVelocity;
+    private Vector2 lookVelocity;
 
     public InteractionPanel interactionPanel;
     public PointerController pointerController;
@@ -70,7 +75,20 @@ public class PlayerController : MonoBehaviour
         CalculateLookInputSmoothing();
         UpdatePlayerLook();
     }
-
+    public void OnJump(InputAction.CallbackContext value)
+    {
+        if (OnGround() || !groundCheck) DoJump();
+    }
+    private bool OnGround()
+    {
+        return groundCheck.isGrounded;
+    }
+    private void DoJump()
+    {
+        Vector3 ForcePosition = transform.GetChild(1).transform.position;
+        Rigidbody rb = this.GetComponent<Rigidbody>();
+        rb.AddForceAtPosition(Vector3.up * 500, ForcePosition);
+    }
     public void OnMovement(InputAction.CallbackContext value)
     {
         if (cam3D.enabled)
@@ -90,7 +108,7 @@ public class PlayerController : MonoBehaviour
             Vector2 inputLook = value.ReadValue<Vector2>();
             rawInputLook = new Vector3(inputLook.x, inputLook.y, 0);
             consumerInputLook = rawInputLook;
-            rawInputLook = Vector3.zero;
+            rawInputLook = Vector3.zero;            
         }
         //Debug.Log(string.Format("Raw Look Input: {0}", rawInputLook));
     }
