@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311915, g: 0.3807396, b: 0.35872662, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311918, g: 0.3807398, b: 0.35872716, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1071,6 +1071,22 @@ PrefabInstance:
     - target: {fileID: 7129242650358775870, guid: 4814712b928ddd64b811bcdcd2365314, type: 3}
       propertyPath: sounds.Array.size
       value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 7129242650358775870, guid: 4814712b928ddd64b811bcdcd2365314, type: 3}
+      propertyPath: sounds.Array.data[8].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 48e7f75fb7fa11c488ec51f2888ff23f, type: 3}
+    - target: {fileID: 7129242650358775870, guid: 4814712b928ddd64b811bcdcd2365314, type: 3}
+      propertyPath: sounds.Array.data[9].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: dff4006d51557e44dab087e44a0455fa, type: 3}
+    - target: {fileID: 7129242650358775870, guid: 4814712b928ddd64b811bcdcd2365314, type: 3}
+      propertyPath: sounds.Array.data[10].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 48e7f75fb7fa11c488ec51f2888ff23f, type: 3}
+    - target: {fileID: 7129242650358775870, guid: 4814712b928ddd64b811bcdcd2365314, type: 3}
+      propertyPath: sounds.Array.data[10].name
+      value: WireBoxPuzzleWireWin
       objectReference: {fileID: 0}
     - target: {fileID: 7129242650358775870, guid: 4814712b928ddd64b811bcdcd2365314, type: 3}
       propertyPath: sounds.Array.data[11].name
