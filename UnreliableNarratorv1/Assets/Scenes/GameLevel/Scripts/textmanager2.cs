@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-public class TextManager : MonoBehaviour
+public class textmanager2 : MonoBehaviour
 {
 	//game objects
 	public GameObject textBox;
@@ -12,17 +12,14 @@ public class TextManager : MonoBehaviour
 	public TextAsset textFile;
 	public string[] TextLines;
 	//player
-	public PlayerController player;
 	//settings variables
 	public int currentLine;
 	public int endAtLine;
 	
 	public bool isActive;
-	public bool StopPlayerMovement;
     
     void Start()
     {
-		player = FindObjectOfType<PlayerController>();
 		
          if(textFile !=null){
 			TextLines = (textFile.text.Split('\n'));
@@ -59,9 +56,6 @@ public class TextManager : MonoBehaviour
 	public void EnableTextBox(){
 		textBox.SetActive(true);
 		
-		if(StopPlayerMovement){
-				player.canMove = false;
-		}
 		isActive = true;
 	}
 	public void EnableTextBox2(){
@@ -71,7 +65,6 @@ public class TextManager : MonoBehaviour
 	
 	public void DisableTextBox(){
 		textBox.SetActive(false);
-		player.canMove = true;
 		isActive = false;
 	}
 	

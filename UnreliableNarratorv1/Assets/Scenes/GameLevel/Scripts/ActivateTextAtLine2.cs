@@ -2,13 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ActivateTextAtLine : MonoBehaviour
+public class ActivateTextAtLine2 : MonoBehaviour
 {
 	public TextAsset theText;
 	public int startLine;
 	public int endLine;
 	
-	public TextManager theTextManager;
+	public textmanager2 theTextManager;
 	
 	public bool DestroyWhenActivated;
 	
@@ -16,15 +16,10 @@ public class ActivateTextAtLine : MonoBehaviour
     void Start()
     {
 		
-        theTextManager = FindObjectOfType<TextManager>();
+        theTextManager = FindObjectOfType<textmanager2>();
     }
 
 	
-	private void OnTriggerEnter(Collider other){
-		if(other.gameObject.name == "Player"){
-			SetScript();
-		}
-	}
 	public void SetScript(){
 		
 			Debug.Log("Triggered by Enemy");
