@@ -7,7 +7,7 @@ public class ActivateTextAtLine2 : MonoBehaviour
 	public TextAsset theText;
 	public int startLine;
 	public int endLine;
-	
+	public GameObject trigger;
 	public textmanager2 theTextManager;
 	
 	public bool DestroyWhenActivated;
@@ -18,6 +18,13 @@ public class ActivateTextAtLine2 : MonoBehaviour
 		
         theTextManager = FindObjectOfType<textmanager2>();
     }
+	
+	void update(){
+		if (trigger.activeSelf ==true){
+			Debug.Log("ACTIVE");
+			SetScript();
+		}
+	}
 
 	
 	public void SetScript(){
