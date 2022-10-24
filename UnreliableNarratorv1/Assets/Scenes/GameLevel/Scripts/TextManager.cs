@@ -5,20 +5,24 @@ using UnityEngine.UI;
 using TMPro;
 public class TextManager : MonoBehaviour
 {
+	//game objects
 	public GameObject textBox;
 	public Text Speech;
-	
+	//file shit
 	public TextAsset textFile;
 	public string[] TextLines;
-	
+	//player
+	public PlayerController player;
+	//settings variables
 	public int currentLine;
 	public int endAtLine;
-	string test = "hi";
-	//public PlayerController player;
-    // Start is called before the first frame update
+	
+	public bool isActive;
+	public bool StopPlayerMovement;
+    
     void Start()
     {
-		//player = FindObjectOfType<PlayerController>();
+		player = FindObjectOfType<PlayerController>();
 		
          if(textFile !=null){
 			TextLines = (textFile.text.Split('\n'));
@@ -27,17 +31,50 @@ public class TextManager : MonoBehaviour
 		if(endAtLine == 0){
 			endAtLine = TextLines.Length - 1;
 		}
+		if(isActive){
+			EnableTextBox();
+		}
+		else{
+				DisableTextBox();
+		}
     }
     
 	void LateUpdate(){
+		
+		if(!isActive){
+			return;
+		}
 		
 		Speech.text = TextLines[currentLine];
 		if(Input.GetKeyDown(KeyCode.Return)){
 			currentLine +=1;
 		}
 		if(currentLine>endAtLine){
-			textBox.SetActive(false);
+			DisableTextBox();
 		}
 	}
-
+	
+	
+	
+	public void EnableTextBox(){
+		textBox.SetActive(true);
+		
+		if(StopPlayerMovement){
+				player.canMove = false;
+		}
+		isActive = true;
+	}
+	
+	public void DisableTextBox(){
+		textBox.SetActive(false);
+		player.canMove = true;
+		isActive = false;
+	}
+	
+	public void ReloadScript(TextAsset thetext){
+		if(thetext != null ){
+			TextLines = new string[1];
+			TextLines = (thetext.text.Split('\n'));
+		}
+	}
 }

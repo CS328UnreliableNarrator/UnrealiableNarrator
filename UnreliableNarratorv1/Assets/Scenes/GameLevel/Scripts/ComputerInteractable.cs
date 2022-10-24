@@ -19,32 +19,48 @@ public class ComputerInteractable : MonoBehaviour, IInteractable
 
     public bool Interact(Interactor interactor)
     {
-        bool locked;
-        if (PlayerPrefs.HasKey("PCLock"))
+        switch(id)
         {
-            locked = System.Convert.ToBoolean(PlayerPrefs.GetInt("PCLock"));
-            Debug.Log("Locked: " + locked);
-            if (!locked)
-            {
+            // Bosses Computer
+            case 0:
+                bool locked;
+                if (PlayerPrefs.HasKey("PCLock"))
+                {
+                    locked = System.Convert.ToBoolean(PlayerPrefs.GetInt("PCLock"));
+                    Debug.Log("Locked: " + locked);
+                    if (!locked)
+                    {
+                        Debug.Log("Using Computer!");
+                        FindObjectOfType<AudioManager>().Play(OnSuccess);
+                        SceneManager.LoadScene(2); //TODO, make unique
+                        return true;
+                    }
+                    else
+                    {
+                        interactor.Pointer.SetName(promptFail);
+                    }
+                }
+                else
+                {
+                    FindObjectOfType<AudioManager>().Play(OnFail);
+                    Debug.Log("Prompt Fail: " + promptFail);
+                    PointerController pointer = interactor.Pointer;
+                    pointer.SetName(promptFail);
+                }
+                break;
+            // Camille's Computer
+            case 1:
                 Debug.Log("Using Computer!");
                 FindObjectOfType<AudioManager>().Play(OnSuccess);
-                SceneManager.LoadScene(2); //TODO, make unique
+                SceneManager.LoadScene(5);
                 return true;
-            }
-            else
-            {
-                
-                interactor.Pointer.SetName(promptFail);
-                return false;
-            }
-        }
-        else
-        {
-            FindObjectOfType<AudioManager>().Play(OnFail);
-            Debug.Log("Prompt Fail: " + promptFail);
-            PointerController pointer = interactor.Pointer;
-            pointer.SetName(promptFail);
-            return false;
-        }
+            default:
+                Debug.Log("This computer does not have a valid ID");
+                break;
+
+
+       }
+        
+        return false;
     }
 }

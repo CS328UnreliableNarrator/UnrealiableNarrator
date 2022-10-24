@@ -28,8 +28,6 @@ public class LineController : MonoBehaviour
     {
         this.isColorDefault = false;
         this.GetComponent<Animator>().SetTrigger("CorrectPattern");
-        Invoke("SwitchScene", 1);
-
     }
 
     public void PlayWrongPatternAnimation()
@@ -43,7 +41,7 @@ public class LineController : MonoBehaviour
         this.GetComponent<Animator>().SetTrigger("Exit");
     }
 
-    private void SwitchScene()
+    public void SwitchScene()
     {
         SceneManager.LoadScene(1);
     }
