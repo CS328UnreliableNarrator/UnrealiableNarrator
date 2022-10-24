@@ -5445,7 +5445,7 @@ GameObject:
   - component: {fileID: 406130573}
   m_Layer: 0
   m_Name: narratetrigger1
-  m_TagString: Untagged
+  m_TagString: narrate
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5457,13 +5457,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 406130571}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
+  m_LocalPosition: {x: -16.960037, y: -1.2962208, z: -16.178074}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1665814700}
-  m_RootOrder: -1
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &406130573
 MonoBehaviour:
@@ -5490,11 +5490,11 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 406130571}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 1.39, y: 2.59, z: 0.81}
+  m_Size: {x: 2.04, y: 2.46, z: 2.09}
+  m_Center: {x: 0.1, y: 2.59, z: -0.19}
 --- !u!1001 &408401917
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8589,9 +8589,10 @@ GameObject:
   - component: {fileID: 632177131}
   - component: {fileID: 632177132}
   - component: {fileID: 632177133}
+  - component: {fileID: 632177134}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: narrate
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8907,6 +8908,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseScreen: {fileID: 2076137416}
   pointer: {fileID: 288401545}
+--- !u!114 &632177134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 632177122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b26049637ef1e7b4a86866ed1ae53365, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theText: {fileID: 4900000, guid: 227df02a373a52b4f9f8cfc06fd96ddd, type: 3}
+  startLine: 6
+  endLine: 7
+  theTextManager: {fileID: 285510011}
+  DestroyWhenActivated: 1
 --- !u!1001 &632423426
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18630,6 +18648,24 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 61496271365364246, guid: c6d8e13d256761045bb64a60fd7f5525, type: 3}
   m_PrefabInstance: {fileID: 1080740931}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1369159134 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3383813647218937758, guid: f7e77f387cf0f3c41b30918272f6e386, type: 3}
+  m_PrefabInstance: {fileID: 989601494}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1369159135
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1369159134}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5.54, y: 4.08, z: 8.34}
+  m_Center: {x: 0.8, y: 2.68, z: -7.95}
 --- !u!1 &1369260523
 GameObject:
   m_ObjectHideFlags: 0
@@ -21302,18 +21338,18 @@ PrefabInstance:
       propertyPath: m_text
       value: 'Hey Christine!
 
-        
 
-        Can you tell our new maintanence
-        guy to change the pin on the door. I can''t seem to find him anywhere but
-        we need him to change that ASAP.
 
-        
+        Can you tell our new maintanence guy to change
+        the pin on the door. I can''t seem to find him anywhere but we need him to
+        change that ASAP.
 
-        P.S Make sure he writes
-        it down! I don''t want a repeat of what happened up here.
 
-        
+
+        P.S Make sure he writes it down! I don''t want
+        a repeat of what happened up here.
+
+
 
         Thanks!
 
@@ -22717,10 +22753,7 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 8004949829757348212, guid: 3f43feb3b9b0acf42b97d6f967aa2e3a, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 406130572}
+    m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 3f43feb3b9b0acf42b97d6f967aa2e3a, type: 3}
 --- !u!4 &1665814700 stripped
 Transform:
