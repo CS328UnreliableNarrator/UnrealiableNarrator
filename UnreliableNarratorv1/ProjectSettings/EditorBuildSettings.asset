@@ -10,7 +10,10 @@ EditorBuildSettings:
     guid: ad7e5851ec8174fb888d45769beaf720
   - enabled: 1
     path: Assets/Scenes/GameLevel/Jasmines build.unity
-    guid: 12027804e776f084a9ec9efc7b760da8
+    guid: 342864d87f5d6c045ba0e9c7d95cc622
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/UnlockPatternScene/UnlockPattern.unity
     guid: a0160f65a234440b7a664c749c09fba7
