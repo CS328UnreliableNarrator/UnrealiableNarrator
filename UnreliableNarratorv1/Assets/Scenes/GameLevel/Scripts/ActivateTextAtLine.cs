@@ -25,7 +25,7 @@ public class ActivateTextAtLine : MonoBehaviour
 			theTextManager.ReloadScript(theText);
 			theTextManager.currentLine = startLine;
 			theTextManager.endAtLine = endLine;
-			
+			theTextManager.EnableTextBox();
 			
 			if(DestroyWhenActivated){
 				Destroy(gameObject);
