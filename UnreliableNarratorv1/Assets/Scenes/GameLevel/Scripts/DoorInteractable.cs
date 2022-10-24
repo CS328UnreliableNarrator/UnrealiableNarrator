@@ -83,6 +83,10 @@ public class DoorInteractable : MonoBehaviour, IInteractable
                         interactor.Pointer.SetName(promptFail);
                     }
                 }
+                else
+                {
+                    interactor.Pointer.SetName(promptFail);
+                }
                 break;
             default:
                 Debug.Log("Using Door!");
