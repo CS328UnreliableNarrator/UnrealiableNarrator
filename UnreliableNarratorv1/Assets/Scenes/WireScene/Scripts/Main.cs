@@ -30,7 +30,19 @@ public class Main : MonoBehaviour
             FindObjectOfType<AudioManager>().Play("WireBoxPuzzleWireWin");
 
             // This is a placeholder, I'm not sure where this puzzle will end up going
-            SceneManager.LoadScene(1);
+            try
+            {
+                FindObjectOfType<FadeController>().GetComponent<FadeController>().FadeIn(this._loadGameScene);
+            }
+            catch
+            {
+                this._loadGameScene();
+            }
         }
+    }
+    
+    private void _loadGameScene()
+    {
+        SceneManager.LoadScene(1);
     }
 }
