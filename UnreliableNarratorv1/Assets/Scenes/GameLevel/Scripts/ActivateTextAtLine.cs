@@ -4,15 +4,32 @@ using UnityEngine;
 
 public class ActivateTextAtLine : MonoBehaviour
 {
-    // Start is called before the first frame update
+	public TextAsset theText;
+	public int startLine;
+	public int endLine;
+	
+	public TextManager theTextManager;
+	
+	public bool DestroyWhenActivated;
+	
+	
     void Start()
     {
-        
+		
+        theTextManager = FindObjectOfType<TextManager>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+	
+	void OnTriggerEnter3D(BoxCollider other){
+		if(other.name == "Player"){
+			theTextManager.ReloadScript(theText);
+			theTextManager.currentLine = startLine;
+			theTextManager.endAtLine = endLine;
+			
+			
+			if(DestroyWhenActivated){
+				Destroy(gameObject);
+			}
+		}
+	}
 }

@@ -70,4 +70,11 @@ public class TextManager : MonoBehaviour
 		player.canMove = true;
 		isActive = false;
 	}
+	
+	public void ReloadScript(TextAsset thetext){
+		if(thetext != null ){
+			TextLines = new string[1];
+			TextLines = (thetext.text.Split('\n'));
+		}
+	}
 }
