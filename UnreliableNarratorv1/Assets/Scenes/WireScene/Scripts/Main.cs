@@ -28,9 +28,21 @@ public class Main : MonoBehaviour
         if (onCount == correctCount)
         {
             FindObjectOfType<AudioManager>().Play("WireBoxPuzzleWireWin");
-
+            PlayerPrefs.SetInt("LobbyLock", 0);
             // This is a placeholder, I'm not sure where this puzzle will end up going
-            SceneManager.LoadScene(1);
+            try
+            {
+                FindObjectOfType<FadeController>().GetComponent<FadeController>().FadeIn(this._loadGameScene);
+            }
+            catch
+            {
+                this._loadGameScene();
+            }
         }
+    }
+    
+    private void _loadGameScene()
+    {
+        SceneManager.LoadScene(1);
     }
 }
