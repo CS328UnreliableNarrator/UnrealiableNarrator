@@ -12,6 +12,12 @@ public class MenuController : MonoBehaviour
         // if we use player prefs for settings then this needs to be changed
         // to just delete the relevant keys on game start
         PlayerPrefs.DeleteAll();
+        
+        FindObjectOfType<FadeController>().GetComponent<FadeController>().FadeIn(this._loadGameScene);
+    }
+
+    private void _loadGameScene()
+    {
         SceneManager.LoadScene(this.gameSceneIndex + 1);
     }
 
