@@ -43,6 +43,6 @@ public class LineController : MonoBehaviour
 
     public void SwitchScene()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(6);
     }
 }
