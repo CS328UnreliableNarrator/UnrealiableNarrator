@@ -30,9 +30,14 @@ public class ComputerInteractable : MonoBehaviour, IInteractable
                     Debug.Log("Locked: " + locked);
                     if (!locked)
                     {
+                        if(System.Convert.ToBoolean(PlayerPrefs.GetInt("BossUnlock")))
+                        {
+                            SceneManager.LoadScene(6); //TODO, make unique
+                        }
                         Debug.Log("Using Computer!");
                         FindObjectOfType<AudioManager>().Play(OnSuccess);
-                        SceneManager.LoadScene(2); //TODO, make unique
+                        PlayerPrefs.SetInt("BossUnlock", 1);
+                        SceneManager.LoadScene(6); //TODO, make unique
                         return true;
                     }
                     else

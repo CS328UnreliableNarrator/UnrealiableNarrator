@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657815, g: 0.49641192, b: 0.57481617, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -439,7 +439,7 @@ MonoBehaviour:
   emailWindow: {fileID: 1225740711}
   controlPanelWindow: {fileID: 962420256}
   menuStart: {fileID: 546784898}
-  answer: 1234
+  answer: boss
   input: {fileID: 613063946}
   WrongCodeTextGameObject: {fileID: 1718817059}
   BeforeCorrectCode: {fileID: 2074994022}
@@ -552,6 +552,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1677175700}
+    - target: {fileID: 5845817314794061368, guid: 9addaf2bebe8e4731bb027247486a28f, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.000030517578
+      objectReference: {fileID: 0}
+    - target: {fileID: 5845817314794061368, guid: 9addaf2bebe8e4731bb027247486a28f, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 120.00042
+      objectReference: {fileID: 0}
     - target: {fileID: 5845817314834185362, guid: 9addaf2bebe8e4731bb027247486a28f, type: 3}
       propertyPath: m_Pivot.x
       value: 0
