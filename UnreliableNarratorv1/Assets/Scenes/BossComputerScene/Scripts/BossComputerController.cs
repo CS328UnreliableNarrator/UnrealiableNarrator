@@ -8,9 +8,20 @@ public class BossComputerController : MonoBehaviour
     public GameObject emailWindow;
     public GameObject powerMenu;
 
+    private void OnEnable()
+    {
+        Cursor.visible = true;
+    }
+
+    private void OnDisable()
+    {
+        Cursor.visible = false;
+    }
+
     public void ToggleEmailWindow()
     {
         this.emailWindow.SetActive(!this.emailWindow.activeSelf);
+        PlayerPrefs.SetInt("OfficeDoorLock", 0);
     }
     
     public void TogglePowerMenu()

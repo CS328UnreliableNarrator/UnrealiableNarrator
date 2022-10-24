@@ -818,7 +818,7 @@ MonoBehaviour:
   emailWindow: {fileID: 1225740711}
   controlPanelWindow: {fileID: 962420256}
   menuStart: {fileID: 546784898}
-  answer: 1234
+  answer: boss
   input: {fileID: 613063946}
   WrongCodeTextGameObject: {fileID: 1718817059}
   BeforeCorrectCode: {fileID: 2074994022}
@@ -931,6 +931,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1677175700}
+    - target: {fileID: 5845817314794061368, guid: 9addaf2bebe8e4731bb027247486a28f, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.000030517578
+      objectReference: {fileID: 0}
+    - target: {fileID: 5845817314794061368, guid: 9addaf2bebe8e4731bb027247486a28f, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 120.00042
+      objectReference: {fileID: 0}
     - target: {fileID: 5845817314834185362, guid: 9addaf2bebe8e4731bb027247486a28f, type: 3}
       propertyPath: m_Pivot.x
       value: 0
