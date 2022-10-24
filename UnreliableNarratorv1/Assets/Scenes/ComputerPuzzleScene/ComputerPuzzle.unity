@@ -3050,6 +3050,8 @@ MonoBehaviour:
   emailWindow: {fileID: 1225740711}
   controlPanelWindow: {fileID: 962420256}
   menuStart: {fileID: 546784898}
+  answer: cTiO
+  input: {fileID: 613063946}
 --- !u!4 &1677175701
 Transform:
   m_ObjectHideFlags: 0

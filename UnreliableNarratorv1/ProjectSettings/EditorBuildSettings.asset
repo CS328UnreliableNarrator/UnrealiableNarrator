@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/EndScreen/EndScreen.unity
     guid: adf52f4ec4ef0c1419a51fb1fea53dea
+  - enabled: 1
+    path: Assets/Scenes/ComputerPuzzleScene/ComputerPuzzle.unity
+    guid: 9ee0baa34049d46dc8108f3e4e428f8b
   m_configObjects: {}
