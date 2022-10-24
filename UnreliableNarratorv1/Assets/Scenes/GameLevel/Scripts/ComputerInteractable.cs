@@ -54,7 +54,6 @@ public class ComputerInteractable : MonoBehaviour, IInteractable
                 FindObjectOfType<AudioManager>().Play(OnSuccess);
                 SceneManager.LoadScene(5);
                 return true;
-                break;
             default:
                 Debug.Log("This computer does not have a valid ID");
                 break;

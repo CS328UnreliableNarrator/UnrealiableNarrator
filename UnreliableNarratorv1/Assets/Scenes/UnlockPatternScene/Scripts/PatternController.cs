@@ -173,10 +173,12 @@ public class PatternController : MonoBehaviour
                 int dotIndex = this.Connections[i].To;
                 this.patternDots[dotIndex].GetComponent<PatternDot>().PlayMarkCorrectAnimation();
             }
-            
-            this.patternDots[this.Connections[0].From].GetComponent<PatternDot>().PlayMarkCorrectAnimation();
 
+            LineController line = this.Connections[0].LineObject.GetComponent<LineController>();
+            this.patternDots[this.Connections[0].From].GetComponent<PatternDot>().PlayMarkCorrectAnimation();
+            
             StartCoroutine(this.PlayExitAnimation());
+            line.Invoke("SwitchScene", 1);
         }
         else
         {
