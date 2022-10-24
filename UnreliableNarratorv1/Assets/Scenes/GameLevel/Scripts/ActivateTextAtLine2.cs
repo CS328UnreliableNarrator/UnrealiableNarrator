@@ -22,11 +22,11 @@ public class ActivateTextAtLine2 : MonoBehaviour
 	
 	public void SetScript(){
 		
-			Debug.Log("Triggered by Enemy");
+			Debug.Log("Triggered by Enemy2");
 			theTextManager.ReloadScript(theText);
 			theTextManager.currentLine = startLine;
 			theTextManager.endAtLine = endLine;
-			Debug.Log("fuck this shit");
+			Debug.Log("fuck this shit2");
 			theTextManager.EnableTextBox2();
 			
 			if(DestroyWhenActivated){
