@@ -178,6 +178,7 @@ public class PatternController : MonoBehaviour
             this.patternDots[this.Connections[0].From].GetComponent<PatternDot>().PlayMarkCorrectAnimation();
             
             StartCoroutine(this.PlayExitAnimation());
+            PlayerPrefs.SetInt("OfficeDoorLock", 0);
             line.Invoke("SwitchScene", 1);
         }
         else
