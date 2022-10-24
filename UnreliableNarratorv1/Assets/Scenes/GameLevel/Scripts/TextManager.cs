@@ -46,8 +46,9 @@ public class TextManager : MonoBehaviour
 		}
 		
 		Speech.text = TextLines[currentLine];
-		if(Input.GetKeyDown(KeyCode.Return)){
+		if(player.didAcceptPrompt){
 			currentLine +=1;
+			player.didAcceptPrompt = false;
 		}
 		if(currentLine>endAtLine){
 			DisableTextBox();
@@ -61,6 +62,7 @@ public class TextManager : MonoBehaviour
 		
 		if(StopPlayerMovement){
 				player.canMove = false;
+				player.didAcceptDelay = 3.0f; //3 seconds
 		}
 		isActive = true;
 	}
