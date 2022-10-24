@@ -22,15 +22,21 @@ public class ActivateTextAtLine : MonoBehaviour
 	
 	private void OnTriggerEnter(Collider other){
 		if(other.gameObject.name == "Player"){
+			SetScript();
+		}
+	}
+	public void SetScript(){
+		
 			Debug.Log("Triggered by Enemy");
 			theTextManager.ReloadScript(theText);
 			theTextManager.currentLine = startLine;
 			theTextManager.endAtLine = endLine;
-			theTextManager.EnableTextBox();
+			Debug.Log("fuck this shit");
+			theTextManager.EnableTextBox2();
 			
 			if(DestroyWhenActivated){
 				Destroy(gameObject);
 			}
-		}
+		
 	}
 }

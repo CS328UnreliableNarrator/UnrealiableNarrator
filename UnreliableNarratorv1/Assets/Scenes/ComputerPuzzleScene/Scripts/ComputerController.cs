@@ -68,7 +68,7 @@ public class ComputerController : MonoBehaviour
 
     public void OnSendCodeButtonClick()
     {
-        if (this.input.text == answer)
+        if (this.input.text.ToUpper() == answer.ToUpper())
         {
             PlayerPrefs.SetInt("PCLock", 0);
             PlayerPrefs.Save();

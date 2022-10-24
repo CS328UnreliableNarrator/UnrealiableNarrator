@@ -7,7 +7,7 @@ onBoardingDoNotAskAgain = true
 showPackageIndexes = false
 showStatusBar = false
 scopes = {
-	"last_search.8BEC98E7" = "ref:Assets/Scenes/GameLevel/Scripts/ComputerInteractable.cs"
+	"last_search.8BEC98E7" = "t"
 	"OpenInspectorPreview.8BEC98E7" = "0"
 	"currentGroup.8BEC98E7" = "scene"
 }
@@ -56,6 +56,7 @@ providers = {
 objectSelectors = {
 }
 recentSearches = [
+	"t"
 	"ref:Assets/Scenes/GameLevel/Scripts/ComputerInteractable.cs"
 ]
 searchItemFavorites = [

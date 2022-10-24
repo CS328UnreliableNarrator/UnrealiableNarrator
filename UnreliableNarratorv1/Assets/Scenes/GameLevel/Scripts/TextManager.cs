@@ -64,6 +64,10 @@ public class TextManager : MonoBehaviour
 		}
 		isActive = true;
 	}
+	public void EnableTextBox2(){
+		textBox.SetActive(true);
+		isActive = true;
+	}
 	
 	public void DisableTextBox(){
 		textBox.SetActive(false);

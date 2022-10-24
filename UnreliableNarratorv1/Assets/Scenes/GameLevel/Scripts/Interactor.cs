@@ -57,7 +57,7 @@ public class Interactor : MonoBehaviour
     }
     private void LateUpdate()
     {
-        Debug.Log("Late Update");
+        
         if (this.playerController.pointerController.isActive)
         {
             if(!playerInteractReticle.activeSelf) ToggleReticle();

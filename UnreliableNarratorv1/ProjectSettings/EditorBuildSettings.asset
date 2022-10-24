@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ComputerPuzzleScene/ComputerPuzzle.unity
     guid: 9ee0baa34049d46dc8108f3e4e428f8b
+  - enabled: 1
+    path: Assets/Scenes/BossComputerScene/BossComputerScene.unity
+    guid: 8ceab1274d63742a1957213dda777ae7
   m_configObjects: {}

@@ -69,6 +69,25 @@ public class DoorInteractable : MonoBehaviour, IInteractable
                     interactor.Pointer.SetName(promptFail);
                 }
                 break;
+            case 2:
+                if (PlayerPrefs.HasKey("LobbyLock"))
+                {
+                    bool locked = System.Convert.ToBoolean(PlayerPrefs.GetInt("LobbyLock"));
+                    if (!locked)
+                    {
+                        ToggleDoor();
+                        return true;
+                    }
+                    else
+                    {
+                        interactor.Pointer.SetName(promptFail);
+                    }
+                }
+                else
+                {
+                    interactor.Pointer.SetName(promptFail);
+                }
+                break;
             default:
                 Debug.Log("Using Door!");
                 ToggleDoor(); //TODO, make unique
