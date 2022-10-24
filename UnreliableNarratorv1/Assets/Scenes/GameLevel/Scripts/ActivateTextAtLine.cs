@@ -20,8 +20,9 @@ public class ActivateTextAtLine : MonoBehaviour
     }
 
 	
-	void OnTriggerEnter3D(BoxCollider other){
-		if(other.name == "Player"){
+	private void OnTriggerEnter(Collider other){
+		if(other.gameObject.name == "Player"){
+			Debug.Log("Triggered by Enemy");
 			theTextManager.ReloadScript(theText);
 			theTextManager.currentLine = startLine;
 			theTextManager.endAtLine = endLine;
