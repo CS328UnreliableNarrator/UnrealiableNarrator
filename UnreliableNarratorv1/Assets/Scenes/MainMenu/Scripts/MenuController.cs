@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class MenuController : MonoBehaviour
 {
     public int gameSceneIndex;
+    public Camera camera;
+    public Animator MenuAnimator;
 
     public void StartGame()
     {
@@ -28,6 +30,16 @@ public class MenuController : MonoBehaviour
 
     public void ShowCredits()
     {
-        SceneManager.LoadScene(4);
+        //SceneManager.LoadScene(4);
+        this.camera.GetComponent<Animator>().SetTrigger("ShowCredits");
+        this.MenuAnimator.SetTrigger("HideMenu");
+
+        this.StartCoroutine(this._showMenuAfterCredits());
+    }
+
+    private IEnumerator _showMenuAfterCredits()
+    {
+        yield return new WaitForSeconds(36f);
+        this.MenuAnimator.SetTrigger("ShowMenu");
     }
 }
