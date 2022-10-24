@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657815, g: 0.49641192, b: 0.57481617, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -183,6 +183,10 @@ PrefabInstance:
       propertyPath: sounds.Array.size
       value: 11
       objectReference: {fileID: 0}
+    - target: {fileID: 7129242650358775870, guid: 4814712b928ddd64b811bcdcd2365314, type: 3}
+      propertyPath: sounds.Array.data[7].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: c5e138529681c364088680e7a9d84f63, type: 3}
     - target: {fileID: 7129242650358775870, guid: 4814712b928ddd64b811bcdcd2365314, type: 3}
       propertyPath: sounds.Array.data[11].name
       value: NinePinPuzzleFail
