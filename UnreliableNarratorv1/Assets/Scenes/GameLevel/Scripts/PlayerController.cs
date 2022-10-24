@@ -8,6 +8,7 @@ using UnityEngine.InputSystem.Interactions;
 
 public class PlayerController : MonoBehaviour
 {
+	public bool canMove;
     [Header("Behaviors")]
     public PlayerMovementBehavior playerMovementBehavior;
     public PlayerLookBehavior playerLookBehavior;
@@ -63,6 +64,9 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+		if(!canMove){
+				return;
+		}
         UpdatePlayer();
         this.UpdateInteractionFinder();
     }
