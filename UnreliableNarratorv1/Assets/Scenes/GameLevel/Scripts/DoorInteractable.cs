@@ -46,9 +46,35 @@ public class DoorInteractable : MonoBehaviour, IInteractable
     }
     public bool Interact(Interactor interactor)
     {
-        Debug.Log("Using Door!");
-        ToggleDoor(); //TODO, make unique
-        return true;
+
+        switch (id)
+        {
+            case 1:
+                if (PlayerPrefs.HasKey("OfficeDoorLock"))
+                {
+                    bool locked = System.Convert.ToBoolean(PlayerPrefs.GetInt("OfficeDoorLock"));
+                    if(!locked)
+                    {
+                        Debug.Log("Using Door!");
+                        ToggleDoor();
+                        return true;
+                    }
+                    else
+                    {
+                        interactor.Pointer.SetName(promptFail);
+                    }
+                }
+                else
+                {
+                    interactor.Pointer.SetName(promptFail);
+                }
+                break;
+            default:
+                Debug.Log("Using Door!");
+                ToggleDoor(); //TODO, make unique
+                return true;
+        }
+        return false;
     }
     void ToggleDoor()
     {

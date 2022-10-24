@@ -6321,7 +6321,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 204637719220fe9418100d9f064654c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prompt: Use Computer
+  prompt: Use Camille's Computer
   promptFail: There's no reason to use this
   id: 1
   OnSuccess: 
@@ -21562,6 +21562,14 @@ PrefabInstance:
     - target: {fileID: 5978568862756545843, guid: 68011ddbaadfbbe4fb4c6a1135260e25, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7037488427508017842, guid: 68011ddbaadfbbe4fb4c6a1135260e25, type: 3}
+      propertyPath: id
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7037488427508017842, guid: 68011ddbaadfbbe4fb4c6a1135260e25, type: 3}
+      propertyPath: promptFail
+      value: No Reason to Leave Now
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
