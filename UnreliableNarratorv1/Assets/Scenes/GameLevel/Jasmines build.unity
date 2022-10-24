@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311918, g: 0.3807398, b: 0.35872716, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -9767,7 +9767,6 @@ GameObject:
   - component: {fileID: 632177132}
   - component: {fileID: 632177133}
   - component: {fileID: 632177134}
-  - component: {fileID: 632177135}
   m_Layer: 0
   m_Name: Player
   m_TagString: narrate
@@ -9816,11 +9815,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fc6edd6d7f31084b870cef4ef266eb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canMove: 1
-  didAcceptPrompt: 0
+  canMove: 0
   playerMovementBehavior: {fileID: 632177124}
   playerLookBehavior: {fileID: 632177131}
-  groundCheck: {fileID: 632177135}
+  groundCheck: {fileID: 0}
   playerInput: {fileID: 632177126}
   movementSmoothingSpeed: 15
   lookSmoothingSpeed: 15
@@ -9936,37 +9934,9 @@ MonoBehaviour:
     m_ActionId: fbc42379-2196-4681-ac15-26090aff4a6e
     m_ActionName: PlayerControls/Pause Menu Toggle[/Keyboard/escape]
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 632177125}
-        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
-        m_MethodName: OnJump
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 1
+      m_Calls: []
     m_ActionId: 202752a8-e941-4dae-827f-0ae97d171207
     m_ActionName: PlayerControls/Jump[/Keyboard/space]
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 632177125}
-        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
-        m_MethodName: OnAccept
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 1
-    m_ActionId: 8ab0a6ba-74da-4247-9f1f-2d095c4bff15
-    m_ActionName: PlayerControls/Accept[/Keyboard/enter,/Mouse/leftButton]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Keyboard+Mouse
   m_DefaultActionMap: PlayerControls
@@ -10132,20 +10102,6 @@ MonoBehaviour:
   endLine: 7
   theTextManager: {fileID: 285510011}
   DestroyWhenActivated: 1
---- !u!114 &632177135
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 632177122}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff0b5d8f9fe18c443b467143670d185d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  distanceThreshold: 0.15
-  isGrounded: 1
 --- !u!1001 &632423426
 PrefabInstance:
   m_ObjectHideFlags: 0

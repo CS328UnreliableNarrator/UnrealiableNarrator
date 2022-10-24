@@ -9,8 +9,6 @@ using UnityEngine.InputSystem.Interactions;
 public class PlayerController : MonoBehaviour
 {
 	public bool canMove;
-    [HideInInspector] public bool didAcceptPrompt = false;
-    [HideInInspector] public float didAcceptDelay = 0.2f; //in seconds
     [Header("Behaviors")]
     public PlayerMovementBehavior playerMovementBehavior;
     public PlayerLookBehavior playerLookBehavior;
@@ -56,7 +54,6 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        didAcceptDelay = 3.0f; //5 seconds on start
         cam3D.enabled = cam3DInitialized;
         cam2D.enabled = !cam3DInitialized;
         
@@ -67,13 +64,11 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        didAcceptDelay -= Time.deltaTime;
-        if (!canMove){
+		if(!canMove){
 				return;
 		}
         UpdatePlayer();
         this.UpdateInteractionFinder();
-      
     }
 
     void UpdatePlayer()
@@ -133,15 +128,6 @@ public class PlayerController : MonoBehaviour
     public void OnPause(InputAction.CallbackContext value)
     {
         if(value.performed) pauseController.TogglePause();
-    }
-    public void OnAccept(InputAction.CallbackContext value)
-    {
-
-        if (didAcceptDelay <= 0.0f)
-        {
-            didAcceptPrompt = true;
-            didAcceptDelay = 1.0f;
-        }
     }
     public void OnQuit()
     {
