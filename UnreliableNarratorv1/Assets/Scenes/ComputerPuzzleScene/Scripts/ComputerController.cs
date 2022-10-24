@@ -8,7 +8,7 @@ public class ComputerController : MonoBehaviour
     public GameObject emailWindow;
     public GameObject controlPanelWindow;
     public GameObject menuStart;
-    
+    public GameObject TextManager;
     [SerializeField] private string answer;
     [SerializeField] private TMPro.TMP_InputField input;
     public GameObject WrongCodeTextGameObject;
@@ -64,6 +64,7 @@ public class ComputerController : MonoBehaviour
     {
         this.BeforeCorrectCode.SetActive(false);
         this.AfterCorrectCode.SetActive(true);
+		
     }
 
     public void OnSendCodeButtonClick()
