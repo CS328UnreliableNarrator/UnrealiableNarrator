@@ -8,6 +8,8 @@ public class PointerController : MonoBehaviour
     public bool isActive = false;
     public IInteractable Interactable;
     public GameObject text;
+
+    public GameObject E_button_info;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +31,7 @@ public class PointerController : MonoBehaviour
             this.text.SetActive(true);
             this.isActive = true;
             this.SetName(interactable.InteractionPrompt);
+            this.E_button_info.SetActive(true);
         }
     }
     public void SetName(string name)
@@ -45,6 +48,7 @@ public class PointerController : MonoBehaviour
             this.GetComponent<Animator>().SetTrigger("Deactivate");
             this.text.SetActive(false);
             this.isActive = false;
+            this.E_button_info.SetActive(false);
         }
     }
 }

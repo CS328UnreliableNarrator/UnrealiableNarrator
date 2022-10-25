@@ -8,6 +8,8 @@ public class TextManager : MonoBehaviour
 	//game objects
 	public GameObject textBox;
 	public Text Speech;
+
+	public GameObject Enter_button_info;
 	//file shit
 	public TextAsset textFile;
 	public string[] TextLines;
@@ -63,16 +65,19 @@ public class TextManager : MonoBehaviour
 				player.canMove = false;
 		}
 		isActive = true;
+		this.Enter_button_info.SetActive(true);
 	}
 	public void EnableTextBox2(){
 		textBox.SetActive(true);
 		isActive = true;
+		this.Enter_button_info.SetActive(true);
 	}
 	
 	public void DisableTextBox(){
 		textBox.SetActive(false);
 		player.canMove = true;
 		isActive = false;
+		this.Enter_button_info.SetActive(false);
 	}
 	
 	public void ReloadScript(TextAsset thetext){
