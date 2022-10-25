@@ -4,7 +4,9 @@
     <list default="true" id="e691e0c5-a0cb-4546-ac20-81fab1f3f978" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UnreliableNarratorv1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnreliableNarratorv1/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameLevel/Jasmines build.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameLevel/Jasmines build.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameLevel/Scripts/ExitDoorInteractable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameLevel/Scripts/ExitDoorInteractable.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameLevel/UI/Prefabs/DefaultReticle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameLevel/UI/Prefabs/DefaultReticle.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameLevel/UI/Prefabs/InteractReticle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameLevel/UI/Prefabs/InteractReticle.prefab" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
