@@ -1511,7 +1511,7 @@ GameObject:
   - component: {fileID: 1169816778}
   - component: {fileID: 1169816777}
   m_Layer: 5
-  m_Name: OptionsButton
+  m_Name: Credits
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1581,7 +1581,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1169816778}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1954392277}
+        m_TargetAssemblyTypeName: MenuController, Assembly-CSharp
+        m_MethodName: ShowCredits
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1169816778
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2454,7 +2466,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Options
+  m_text: Credits
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6d42ad837bd134283bc1e251aba45d1f, type: 2}
   m_sharedMaterial: {fileID: -4866784815293692062, guid: 6d42ad837bd134283bc1e251aba45d1f, type: 2}
@@ -3008,12 +3020,12 @@ GameObject:
   - component: {fileID: 1713993150}
   - component: {fileID: 1713993149}
   m_Layer: 5
-  m_Name: CreditsButton
+  m_Name: OldCreditsButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1713993148
 RectTransform:
   m_ObjectHideFlags: 0
