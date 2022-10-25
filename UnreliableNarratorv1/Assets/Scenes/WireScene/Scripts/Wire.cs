@@ -45,6 +45,7 @@ public class Wire : MonoBehaviour
 
     private void Done()
     {
+        PlayerPrefs.SetInt("HintArrow", 1);
         lightOn.SetActive(true);
         Destroy(this);
     }
