@@ -9,6 +9,10 @@ public class MenuController : MonoBehaviour
     public Camera camera;
     public Animator MenuAnimator;
 
+    private void OnEnable()
+    {
+        Cursor.visible = true;
+    }
     public void StartGame()
     {
         // if we use player prefs for settings then this needs to be changed
