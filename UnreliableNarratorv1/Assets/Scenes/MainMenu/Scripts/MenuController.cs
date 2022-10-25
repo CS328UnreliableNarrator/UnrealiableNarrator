@@ -8,7 +8,7 @@ public class MenuController : MonoBehaviour
     public int gameSceneIndex;
     public Camera camera;
     public Animator MenuAnimator;
-
+    
     void Start()
     {
         if (PlayerPrefs.GetInt("MainMenuCredits") == 1)
@@ -18,6 +18,10 @@ public class MenuController : MonoBehaviour
         }
     }
 
+    private void OnEnable()
+    {
+        Cursor.visible = true;
+    }
     public void StartGame()
     {
         // if we use player prefs for settings then this needs to be changed
