@@ -9,6 +9,15 @@ public class MenuController : MonoBehaviour
     public Camera camera;
     public Animator MenuAnimator;
 
+    void Start()
+    {
+        if (PlayerPrefs.GetInt("MainMenuCredits") == 1)
+        {
+            this.ShowCredits();
+            PlayerPrefs.SetInt("MainMenuCredits", 0);
+        }
+    }
+
     public void StartGame()
     {
         // if we use player prefs for settings then this needs to be changed

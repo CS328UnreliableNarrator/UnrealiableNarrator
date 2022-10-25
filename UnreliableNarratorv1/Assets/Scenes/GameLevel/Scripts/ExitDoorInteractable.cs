@@ -21,7 +21,9 @@ public class ExitDoorInteractable : MonoBehaviour, IInteractable
     public bool Interact(Interactor interactor)
     {
         Debug.Log("Game finished!");
-        SceneManager.LoadScene(4);
+        PlayerPrefs.SetInt("MainMenuCredits", 1);
+        PlayerPrefs.Save();
+        SceneManager.LoadScene(0);
 
         return false;
     }
