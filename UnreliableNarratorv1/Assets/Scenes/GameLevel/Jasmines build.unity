@@ -16103,6 +16103,41 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2445227256931449571, guid: dbaef9a456e292d4091ac2025a6bd38e, type: 3}
   m_PrefabInstance: {fileID: 929990104}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &931233902 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2673807543454247, guid: 98c0b83fad575ad42aa8143310e467f2, type: 3}
+  m_PrefabInstance: {fileID: 8717453313438690493}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &931233904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 931233902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f26484b11d9845f4b30a41c2028da45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prompt: Exit door
+  promptFail: 
+  id: 0
+  OnSuccess: 
+  OnFail: 
+--- !u!65 &931233907
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 931233902}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.010000001, y: 0.0071347044, z: 0.009999998}
+  m_Center: {x: 0, y: 0.0014326466, z: -0.000000014901161}
 --- !u!1 &950717066
 GameObject:
   m_ObjectHideFlags: 0
@@ -19999,6 +20034,41 @@ Transform:
   m_Father: {fileID: 1519846710}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1200847306 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8310108722320259155, guid: 98c0b83fad575ad42aa8143310e467f2, type: 3}
+  m_PrefabInstance: {fileID: 8717453313438690493}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1200847308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1200847306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f26484b11d9845f4b30a41c2028da45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prompt: Exit door
+  promptFail: 
+  id: 0
+  OnSuccess: 
+  OnFail: 
+--- !u!65 &1200847311
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1200847306}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.010000001, y: 0.0071347044, z: 0.009999998}
+  m_Center: {x: 0, y: 0.0014326466, z: -0.000000014901161}
 --- !u!1001 &1203588633
 PrefabInstance:
   m_ObjectHideFlags: 0
